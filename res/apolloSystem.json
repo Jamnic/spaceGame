@@ -15,7 +15,6 @@
     "orbit" : {
       "orbitting" : null,
       "radius" : 0.0,
-      "velocity" : 0.0,
       "position" : 0.0
     },
     "sphere" : {
@@ -43,7 +42,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -63,7 +61,6 @@
         }
       },
       "radius" : 6481.5,
-      "velocity" : 0.0056229999999999995,
       "position" : 60.0
     },
     "sphere" : {
@@ -91,7 +88,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -111,7 +107,6 @@
         }
       },
       "radius" : 10827.0,
-      "velocity" : 0.004329,
       "position" : 80.0
     },
     "sphere" : {
@@ -139,7 +134,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -159,7 +153,6 @@
         }
       },
       "radius" : 19879.5,
-      "velocity" : 0.003212,
       "position" : 100.0
     },
     "sphere" : {
@@ -191,7 +184,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -211,7 +203,6 @@
             }
           },
           "radius" : 19879.5,
-          "velocity" : 0.003212,
           "position" : 100.0
         },
         "sphere" : {
@@ -231,7 +222,6 @@
         }
       },
       "radius" : 2467.5,
-      "velocity" : 1.232E-4,
       "position" : 100.0
     },
     "sphere" : {
@@ -263,7 +253,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -283,7 +272,6 @@
             }
           },
           "radius" : 19879.5,
-          "velocity" : 0.003212,
           "position" : 100.0
         },
         "sphere" : {
@@ -303,7 +291,6 @@
         }
       },
       "radius" : 1635.0,
-      "velocity" : 1.452E-4,
       "position" : 80.0
     },
     "sphere" : {
@@ -331,7 +318,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -351,7 +337,6 @@
         }
       },
       "radius" : 66256.5,
-      "velocity" : 0.0018870000000000002,
       "position" : 120.0
     },
     "sphere" : {
@@ -383,7 +368,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -403,7 +387,6 @@
             }
           },
           "radius" : 66256.5,
-          "velocity" : 0.0018870000000000002,
           "position" : 120.0
         },
         "sphere" : {
@@ -423,7 +406,6 @@
         }
       },
       "radius" : 2385.0,
-      "velocity" : 1.452E-4,
       "position" : 80.0
     },
     "sphere" : {
@@ -455,7 +437,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -475,7 +456,6 @@
             }
           },
           "radius" : 66256.5,
-          "velocity" : 0.0018870000000000002,
           "position" : 120.0
         },
         "sphere" : {
@@ -495,7 +475,6 @@
         }
       },
       "radius" : 3360.0,
-      "velocity" : 1.452E-4,
       "position" : 100.0
     },
     "sphere" : {
@@ -527,7 +506,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -547,7 +525,6 @@
             }
           },
           "radius" : 66256.5,
-          "velocity" : 0.0018870000000000002,
           "position" : 120.0
         },
         "sphere" : {
@@ -567,7 +544,6 @@
         }
       },
       "radius" : 2985.0,
-      "velocity" : 1.452E-4,
       "position" : 60.0
     },
     "sphere" : {
@@ -599,7 +575,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -619,7 +594,6 @@
             }
           },
           "radius" : 66256.5,
-          "velocity" : 0.0018870000000000002,
           "position" : 120.0
         },
         "sphere" : {
@@ -639,7 +613,6 @@
         }
       },
       "radius" : 3135.0,
-      "velocity" : 1.452E-4,
       "position" : 80.0
     },
     "sphere" : {
@@ -667,7 +640,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -687,7 +659,6 @@
         }
       },
       "radius" : 144648.0,
-      "velocity" : 0.001232,
       "position" : 200.0
     },
     "sphere" : {
@@ -719,7 +690,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -739,7 +709,6 @@
             }
           },
           "radius" : 144648.0,
-          "velocity" : 0.001232,
           "position" : 200.0
         },
         "sphere" : {
@@ -759,7 +728,6 @@
         }
       },
       "radius" : 3240.0,
-      "velocity" : 1.452E-4,
       "position" : 120.0
     },
     "sphere" : {
@@ -791,7 +759,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -811,7 +778,6 @@
             }
           },
           "radius" : 144648.0,
-          "velocity" : 0.001232,
           "position" : 200.0
         },
         "sphere" : {
@@ -831,7 +797,6 @@
         }
       },
       "radius" : 3885.0,
-      "velocity" : 1.452E-4,
       "position" : 80.0
     },
     "sphere" : {
@@ -863,7 +828,6 @@
             "orbit" : {
               "orbitting" : null,
               "radius" : 0.0,
-              "velocity" : 0.0,
               "position" : 0.0
             },
             "sphere" : {
@@ -883,7 +847,6 @@
             }
           },
           "radius" : 144648.0,
-          "velocity" : 0.001232,
           "position" : 200.0
         },
         "sphere" : {
@@ -903,7 +866,6 @@
         }
       },
       "radius" : 4710.0,
-      "velocity" : 1.452E-4,
       "position" : 80.0
     },
     "sphere" : {
@@ -931,7 +893,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -951,7 +912,6 @@
         }
       },
       "radius" : 219648.0,
-      "velocity" : 0.0016320000000000002,
       "position" : 200.0
     },
     "sphere" : {
@@ -979,7 +939,6 @@
         "orbit" : {
           "orbitting" : null,
           "radius" : 0.0,
-          "velocity" : 0.0,
           "position" : 0.0
         },
         "sphere" : {
@@ -999,7 +958,6 @@
         }
       },
       "radius" : 69648.0,
-      "velocity" : 0.0010320000000000001,
       "position" : 200.0
     },
     "sphere" : {

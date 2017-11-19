@@ -1,5 +1,6 @@
 package game.architecture;
 
+
 import model.Coords;
 
 /**
