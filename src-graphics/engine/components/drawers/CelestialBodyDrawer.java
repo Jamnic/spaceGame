@@ -28,7 +28,7 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
         if (sphereResolution != DrawableResolution.INVISIBLE) {
 
             CelestialBodyType type = celestialBody.getType();
-            if (CelestialBodyType.glowingCelestials().contains(type))
+            if (CelestialBodyType.Companion.glowingCelestials().contains(type))
                 LightLoader.sunLight(gl);
             else
                 LightLoader.planetaryLight(gl);
