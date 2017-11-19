@@ -14,8 +14,6 @@ import engine.graphics.holders.GLUHolder;
  */
 public abstract class Drawer<T extends Drawable> extends GameComponentContainer {
 
-    protected static final int RING_THICKNESS = 10;
-
     /* ========== PUBLIC ========== */
     /**
      * Draws given {@link Drawable} object.

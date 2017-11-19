@@ -28,24 +28,8 @@ public final class SkyBoxDrawer extends Drawer<SkyBox> {
 			sphere.setTexture(texture);
 		}
 
-		drawSkyBox(gl, sphere, texture);
+		new DrawableSphere(sphere, texture).draw(gl);
 
 		gl.glDepthMask(true);
-	}
-
-	/* ========== PRIVATE ========== */
-	private static final GLU GLU = GLUHolder.GLU;
-
-	private void drawSkyBox(GL2 gl, Sphere sphere, Texture texture) {
-		final GLUquadric quadric = GLU.gluNewQuadric();
-		GLU.gluQuadricTexture(quadric, true);
-
-		texture.enable(gl);
-		texture.bind(gl);
-
-		int resolution = sphere.getResolution().getResolution();
-		GLU.gluSphere(quadric, sphere.getRadius(), resolution, resolution);
-
-		texture.disable(gl);
 	}
 }

@@ -1,22 +1,17 @@
 package engine.components.drawers;
 
-import javax.media.opengl.GL2;
-import javax.media.opengl.glu.GLU;
-import javax.media.opengl.glu.GLUquadric;
-
-import model.celestials.CelestialBody;
-import model.celestials.CelestialBodyType;
-
 import com.jogamp.opengl.util.texture.Texture;
-
-import engine.graphics.holders.GLUHolder;
 import engine.utils.LightLoader;
 import engine.utils.TextureLoader;
 import game.architecture.Drawer;
+import model.celestials.CelestialBody;
+import model.celestials.CelestialBodyType;
 import model.celestials.parts.Clouds;
 import model.celestials.parts.Ring;
 import model.celestials.parts.Sphere;
 import model.type.DrawableResolution;
+
+import javax.media.opengl.GL2;
 
 /**
  * Component responsible for drawing {@link CelestialBody}.
@@ -39,19 +34,13 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
                 LightLoader.planetaryLight(gl);
 
             translateWithCoords(gl, celestialBody.getOrbit().getCoords());
-            drawSphere(gl, sphere, sphereResolution);
+            drawSphere(gl, sphere);
         }
 
     }
 
     /* ========== PRIVATE ========== */
-    private final GLU glu = GLUHolder.GLU;
-
-    private GLUquadric quadric;
-
-    private void drawSphere(GL2 gl, Sphere sphere, DrawableResolution sphereResolution) {
-
-        int resolution = sphereResolution.getResolution();
+    private void drawSphere(GL2 gl, Sphere sphere) {
 
         Texture texture = sphere.getTexture();
         if (texture == null)
@@ -63,13 +52,7 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
         gl.glRotated(sphere.getInclination(), 1, 0, 0);
         gl.glRotated(sphere.getRotation(), 0, 0, 1);
 
-        quadric = glu.gluNewQuadric();
-        glu.gluQuadricTexture(quadric, true);
-        texture.enable(gl);
-        texture.bind(gl);
-        glu.gluSphere(quadric, sphere.getRadius(), resolution, resolution);
-        texture.disable(gl);
-        glu.gluDeleteQuadric(quadric);
+        new DrawableSphere(sphere, texture).draw(gl);
 
         Clouds clouds = sphere.getClouds();
         if (clouds != null) {

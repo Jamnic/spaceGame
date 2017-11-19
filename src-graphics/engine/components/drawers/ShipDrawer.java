@@ -32,7 +32,7 @@ public final class ShipDrawer extends Drawer<Ship> {
     /* ========== PROTECTED ========== */
     protected void drawDrawable(GL2 gl, Ship ship) {
 
-        if (ship.getResolution() != DrawableResolution.INVISIBLE) {
+        if (ship.visible()) {
             Mesh mesh = ship.getMesh();
             if (mesh != null) {
 

@@ -32,6 +32,10 @@ public class Ship extends Entity implements Drawable {
         this.setResolution(DrawableResolution.VERY_FAR);
     }
 
+    public Boolean visible() {
+        return resolution != DrawableResolution.INVISIBLE;
+    }
+
     /* ========== PRIVATE ========== */
     @JsonIgnore
     private DrawableResolution resolution;
