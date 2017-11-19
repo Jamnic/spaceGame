@@ -13,13 +13,13 @@ import model.ship.parts.Control;
 import model.ship.parts.Engine;
 
 /**
- * Calculates velocity and acceleration of {@link Ship}s.
+ * Calculates rotationVelocity and acceleration of {@link Ship}s.
  */
 public final class VelocityCalculator {
 
     /* ========== PUBLIC ========== */
     /**
-     * Calculates and saves velocity and acceleration parameters of ship.
+     * Calculates and saves rotationVelocity and acceleration parameters of ship.
      */
     public static void setVelocity(Engine engine, Control control) {
 

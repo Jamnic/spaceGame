@@ -11,7 +11,7 @@ public interface Constants {
     double SCALE = 0.01;
     double AU_PARAMETER = 1500000 * SCALE;
 
-    double ROTATION_PARAMETER = 0.0001 * SCALE; // change to angular velocity
+    double ROTATION_PARAMETER = 0.0001 * SCALE; // change to angular rotationVelocity
     double ORBITTING_PARAMETER = 0.01 * SCALE;
     double MOON_VARIABLE = 50000 * SCALE;
     double RADIUS_PARAMETER = 1 * SCALE;

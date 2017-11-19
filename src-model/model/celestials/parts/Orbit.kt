@@ -16,15 +16,13 @@ import model.celestials.CelestialBody
 class Orbit
 @JsonCreator
 constructor(
-        var orbittingBodyId: Long,
+        var orbitting: CelestialBody?,
         var radius: Double,
-        var velocity: Double,
+        velocity: Double,
         var position: Double
 ) {
     @JsonIgnore
     var coords: Coords = Coords(0.0, 0.0, 0.0)
-    @JsonIgnore
-    var displayCoords: Coords? = null
     @JsonIgnore
     var angularVelocity: Double = PhysicsCalculator.angularVelocity(radius, velocity)
 }

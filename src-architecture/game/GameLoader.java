@@ -73,7 +73,7 @@ public class GameLoader extends GameComponentContainer implements Tickable {
     public void drawCurrentSkyBox(GL2 gl) {
         for (StarSystem starSystem : starSystems) {
             if (starSystem.isVisible()) {
-                GameComponentContainer.skyBoxDrawer.draw(gl, starSystem.getSkyBox());
+                starSystem.getSkyBox().draw(gl);
                 return;
             }
         }

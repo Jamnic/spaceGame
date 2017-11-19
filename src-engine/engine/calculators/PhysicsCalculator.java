@@ -17,7 +17,7 @@ public final class PhysicsCalculator {
 
     /* ========== PUBLIC ========== */
     /**
-     * Calculates angular velocity from given radius and radial velocity.
+     * Calculates angular rotationVelocity from given radius and radial rotationVelocity.
      */
     public static final double angularVelocity(double radius, double velocity) {
         return radius > 0 ? (velocity * FULL_CIRCLE) / (radius * TWO_PI) : 0;

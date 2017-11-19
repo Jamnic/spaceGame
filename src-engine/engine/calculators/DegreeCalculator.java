@@ -50,13 +50,7 @@ public final class DegreeCalculator {
             missing = missing + FULL_CIRCLE;
         }
 
-        double rotationChange = rotationXSpeed <= Math.abs(missing) ? rotationXSpeed * Math.signum(missing) : missing;
-
-        System.out.println("Heading: " + TextLogger.twoDecimal(heading) + " Rotation: "
-                + TextLogger.twoDecimal(rotationX) + " Missing: " + TextLogger.twoDecimal(missing) + " Change: "
-                + TextLogger.twoDecimal(rotationChange));
-
-        return rotationChange;
+        return rotationXSpeed <= Math.abs(missing) ? rotationXSpeed * Math.signum(missing) : missing;
     }
 
     /**

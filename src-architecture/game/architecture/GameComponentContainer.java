@@ -11,7 +11,6 @@ import com.jogamp.opengl.util.gl2.GLUT;
 
 import engine.components.drawers.CelestialBodyDrawer;
 import engine.components.drawers.ShipDrawer;
-import engine.components.drawers.SkyBoxDrawer;
 import engine.graphics.holders.GLUHolder;
 import engine.graphics.holders.GLUTHolder;
 import engine.managers.CelestialBodyManager;
@@ -30,7 +29,6 @@ public abstract class GameComponentContainer {
     protected static CelestialBodyDrawer celestialBodyDrawer = new CelestialBodyDrawer();
     protected static ShipDrawer shipDrawer = new ShipDrawer();
 
-    protected static SkyBoxDrawer skyBoxDrawer = new SkyBoxDrawer();
     public static GameLoader systemLoader = new GameLoader();
 
     public static CelestialBodyRepository celestialBodyRepository = new CelestialBodyRepository();

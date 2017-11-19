@@ -59,7 +59,7 @@ public class CelestialBodyManager extends Manager<CelestialBody> {
         DegreeCalculator.rotateSphere(sphere);
         CoordsCalculator.setCelestialBodyPosition(orbit);
 
-        CelestialBody orbittingBody = celestialBodyRepository.getById(orbit.getOrbittingBodyId());
+        CelestialBody orbittingBody = orbit.getOrbitting();
         if (orbittingBody != null) {
 
             // Parameters

@@ -2,7 +2,6 @@ package model.celestials.parts
 
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonIgnore
-import com.jogamp.opengl.util.texture.Texture
 import engine.calculators.PhysicsCalculator
 import engine.components.drawers.DrawableSphere
 import engine.utils.TextureLoader
@@ -23,20 +22,20 @@ class Sphere
 constructor(
         var textureFile: String?,
         var radius: Double,
-        var velocity: Double,
+        rotationVelocity: Double,
         var inclination: Double
 ) : Drawable {
     var rotation: Double = 0.toDouble()
 
     @JsonIgnore
-    var angularVelocity: Double = PhysicsCalculator.angularVelocity(radius, velocity)
+    var angularVelocity: Double = PhysicsCalculator.angularVelocity(radius, rotationVelocity)
     @JsonIgnore
     var resolution: DrawableResolution = DrawableResolution.VERY_FAR
 
     @JsonIgnore
     var drawable: DrawableSphere? = null
 
-    override fun draw(gl: GL2?) {
+    override fun draw(gl: GL2) {
         if (this.drawable == null) {
             this.drawable = DrawableSphere(this, TextureLoader.getTexture(gl, textureFile))
         }

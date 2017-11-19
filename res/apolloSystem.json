@@ -5,7 +5,6 @@
       "rotation" : 0.0,
       "textureFile" : "BlueGalaxy",
       "radius" : 110.0,
-      "velocity" : 0.0,
       "inclination" : 0.0
     }
   },
@@ -14,7 +13,7 @@
     "id" : 25,
     "name" : "Apollo",
     "orbit" : {
-      "orbittingBodyId" : -1,
+      "orbitting" : null,
       "radius" : 0.0,
       "velocity" : 0.0,
       "position" : 0.0
@@ -23,7 +22,6 @@
       "rotation" : 0.0,
       "textureFile" : "Apollo",
       "radius" : 1826.71,
-      "velocity" : 0.0019732000000000005,
       "inclination" : 0.0
     },
     "clouds" : {
@@ -39,7 +37,31 @@
     "id" : 26,
     "name" : "Zorh",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 6481.5,
       "velocity" : 0.0056229999999999995,
       "position" : 60.0
@@ -48,7 +70,6 @@
       "rotation" : 0.0,
       "textureFile" : "Zorh",
       "radius" : 59.827799999999996,
-      "velocity" : 0.0034129200000000007,
       "inclination" : 0.01
     },
     "clouds" : {
@@ -64,7 +85,31 @@
     "id" : 27,
     "name" : "Anthony",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 10827.0,
       "velocity" : 0.004329,
       "position" : 80.0
@@ -73,7 +118,6 @@
       "rotation" : 0.0,
       "textureFile" : "Anthony",
       "radius" : 43.2971,
-      "velocity" : 5.430100000000001E-4,
       "inclination" : 32.41
     },
     "clouds" : {
@@ -89,7 +133,31 @@
     "id" : 28,
     "name" : "David",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 19879.5,
       "velocity" : 0.003212,
       "position" : 100.0
@@ -98,7 +166,6 @@
       "rotation" : 0.0,
       "textureFile" : "David",
       "radius" : 81.2341,
-      "velocity" : 0.0021202300000000003,
       "inclination" : 17.21
     },
     "clouds" : {
@@ -114,7 +181,55 @@
     "id" : 29,
     "name" : "Murmillo",
     "orbit" : {
-      "orbittingBodyId" : 28,
+      "orbitting" : {
+        "id" : 28,
+        "name" : "David",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 19879.5,
+          "velocity" : 0.003212,
+          "position" : 100.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "David",
+          "radius" : 81.2341,
+          "inclination" : 17.21
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 2467.5,
       "velocity" : 1.232E-4,
       "position" : 100.0
@@ -123,7 +238,6 @@
       "rotation" : 0.0,
       "textureFile" : "Murmillo",
       "radius" : 32.9189,
-      "velocity" : 8.290300000000001E-4,
       "inclination" : 2.32
     },
     "clouds" : {
@@ -139,7 +253,55 @@
     "id" : 30,
     "name" : "Retarius",
     "orbit" : {
-      "orbittingBodyId" : 28,
+      "orbitting" : {
+        "id" : 28,
+        "name" : "David",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 19879.5,
+          "velocity" : 0.003212,
+          "position" : 100.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "David",
+          "radius" : 81.2341,
+          "inclination" : 17.21
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 1635.0,
       "velocity" : 1.452E-4,
       "position" : 80.0
@@ -148,7 +310,6 @@
       "rotation" : 0.0,
       "textureFile" : "Retarius",
       "radius" : 10.2317,
-      "velocity" : 2.8175000000000005E-4,
       "inclination" : 4.89
     },
     "clouds" : {
@@ -164,7 +325,31 @@
     "id" : 31,
     "name" : "Alicia",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 66256.5,
       "velocity" : 0.0018870000000000002,
       "position" : 120.0
@@ -173,7 +358,6 @@
       "rotation" : 0.0,
       "textureFile" : "Alicia",
       "radius" : 544.9542,
-      "velocity" : 0.013243890000000001,
       "inclination" : 10.03
     },
     "clouds" : {
@@ -189,7 +373,55 @@
     "id" : 32,
     "name" : "Julio",
     "orbit" : {
-      "orbittingBodyId" : 31,
+      "orbitting" : {
+        "id" : 31,
+        "name" : "Alicia",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 66256.5,
+          "velocity" : 0.0018870000000000002,
+          "position" : 120.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Alicia",
+          "radius" : 544.9542,
+          "inclination" : 10.03
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "AliciaRings",
+          "innerRadius" : 744.9542,
+          "outerRadius" : 1344.9542000000001
+        }
+      },
       "radius" : 2385.0,
       "velocity" : 1.452E-4,
       "position" : 80.0
@@ -198,7 +430,6 @@
       "rotation" : 0.0,
       "textureFile" : "Julio",
       "radius" : 23.9817,
-      "velocity" : 7.6281E-4,
       "inclination" : 11.12
     },
     "clouds" : {
@@ -214,7 +445,55 @@
     "id" : 33,
     "name" : "Maya",
     "orbit" : {
-      "orbittingBodyId" : 31,
+      "orbitting" : {
+        "id" : 31,
+        "name" : "Alicia",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 66256.5,
+          "velocity" : 0.0018870000000000002,
+          "position" : 120.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Alicia",
+          "radius" : 544.9542,
+          "inclination" : 10.03
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "AliciaRings",
+          "innerRadius" : 744.9542,
+          "outerRadius" : 1344.9542000000001
+        }
+      },
       "radius" : 3360.0,
       "velocity" : 1.452E-4,
       "position" : 100.0
@@ -223,7 +502,6 @@
       "rotation" : 0.0,
       "textureFile" : "Maya",
       "radius" : 11.1881,
-      "velocity" : 3.4275000000000006E-4,
       "inclination" : 24.81
     },
     "clouds" : {
@@ -239,7 +517,55 @@
     "id" : 34,
     "name" : "Leo",
     "orbit" : {
-      "orbittingBodyId" : 31,
+      "orbitting" : {
+        "id" : 31,
+        "name" : "Alicia",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 66256.5,
+          "velocity" : 0.0018870000000000002,
+          "position" : 120.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Alicia",
+          "radius" : 544.9542,
+          "inclination" : 10.03
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "AliciaRings",
+          "innerRadius" : 744.9542,
+          "outerRadius" : 1344.9542000000001
+        }
+      },
       "radius" : 2985.0,
       "velocity" : 1.452E-4,
       "position" : 60.0
@@ -248,7 +574,6 @@
       "rotation" : 0.0,
       "textureFile" : "Leo",
       "radius" : 5.2317,
-      "velocity" : 2.1750000000000004E-5,
       "inclination" : 8.19
     },
     "clouds" : {
@@ -264,7 +589,55 @@
     "id" : 35,
     "name" : "Julia",
     "orbit" : {
-      "orbittingBodyId" : 31,
+      "orbitting" : {
+        "id" : 31,
+        "name" : "Alicia",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 66256.5,
+          "velocity" : 0.0018870000000000002,
+          "position" : 120.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Alicia",
+          "radius" : 544.9542,
+          "inclination" : 10.03
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "AliciaRings",
+          "innerRadius" : 744.9542,
+          "outerRadius" : 1344.9542000000001
+        }
+      },
       "radius" : 3135.0,
       "velocity" : 1.452E-4,
       "position" : 80.0
@@ -273,7 +646,6 @@
       "rotation" : 0.0,
       "textureFile" : "Julia",
       "radius" : 8.721900000000002,
-      "velocity" : 1.6221000000000003E-4,
       "inclination" : 16.91
     },
     "clouds" : {
@@ -289,7 +661,31 @@
     "id" : 36,
     "name" : "Victor",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 144648.0,
       "velocity" : 0.001232,
       "position" : 200.0
@@ -298,7 +694,6 @@
       "rotation" : 0.0,
       "textureFile" : "Victor",
       "radius" : 1034.5932,
-      "velocity" : 0.03242943000000001,
       "inclination" : 19.32
     },
     "clouds" : {
@@ -314,7 +709,55 @@
     "id" : 37,
     "name" : "Hoth",
     "orbit" : {
-      "orbittingBodyId" : 36,
+      "orbitting" : {
+        "id" : 36,
+        "name" : "Victor",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 144648.0,
+          "velocity" : 0.001232,
+          "position" : 200.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Victor",
+          "radius" : 1034.5932,
+          "inclination" : 19.32
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "NinurtaRings",
+          "innerRadius" : 1234.5932,
+          "outerRadius" : 1834.5932
+        }
+      },
       "radius" : 3240.0,
       "velocity" : 1.452E-4,
       "position" : 120.0
@@ -323,7 +766,6 @@
       "rotation" : 0.0,
       "textureFile" : "Hoth",
       "radius" : 11.261199999999999,
-      "velocity" : 5.628100000000001E-4,
       "inclination" : 12.17
     },
     "clouds" : {
@@ -339,7 +781,55 @@
     "id" : 38,
     "name" : "Polie",
     "orbit" : {
-      "orbittingBodyId" : 36,
+      "orbitting" : {
+        "id" : 36,
+        "name" : "Victor",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 144648.0,
+          "velocity" : 0.001232,
+          "position" : 200.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Victor",
+          "radius" : 1034.5932,
+          "inclination" : 19.32
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "NinurtaRings",
+          "innerRadius" : 1234.5932,
+          "outerRadius" : 1834.5932
+        }
+      },
       "radius" : 3885.0,
       "velocity" : 1.452E-4,
       "position" : 80.0
@@ -348,7 +838,6 @@
       "rotation" : 0.0,
       "textureFile" : "Polie",
       "radius" : 29.2612,
-      "velocity" : 7.6281E-4,
       "inclination" : 17.17
     },
     "clouds" : {
@@ -364,7 +853,55 @@
     "id" : 39,
     "name" : "Barr",
     "orbit" : {
-      "orbittingBodyId" : 36,
+      "orbitting" : {
+        "id" : 36,
+        "name" : "Victor",
+        "orbit" : {
+          "orbitting" : {
+            "id" : 25,
+            "name" : "Apollo",
+            "orbit" : {
+              "orbitting" : null,
+              "radius" : 0.0,
+              "velocity" : 0.0,
+              "position" : 0.0
+            },
+            "sphere" : {
+              "rotation" : 0.0,
+              "textureFile" : "Apollo",
+              "radius" : 1826.71,
+              "inclination" : 0.0
+            },
+            "clouds" : {
+              "textureFile" : null,
+              "radius" : 0.0
+            },
+            "ring" : {
+              "textureFile" : "",
+              "innerRadius" : 0.0,
+              "outerRadius" : 0.0
+            }
+          },
+          "radius" : 144648.0,
+          "velocity" : 0.001232,
+          "position" : 200.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Victor",
+          "radius" : 1034.5932,
+          "inclination" : 19.32
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "NinurtaRings",
+          "innerRadius" : 1234.5932,
+          "outerRadius" : 1834.5932
+        }
+      },
       "radius" : 4710.0,
       "velocity" : 1.452E-4,
       "position" : 80.0
@@ -373,7 +910,6 @@
       "rotation" : 0.0,
       "textureFile" : "Barr",
       "radius" : 6.7621,
-      "velocity" : 7.281000000000002E-5,
       "inclination" : 7.11
     },
     "clouds" : {
@@ -389,7 +925,31 @@
     "id" : 40,
     "name" : "Ninurta",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 219648.0,
       "velocity" : 0.0016320000000000002,
       "position" : 200.0
@@ -398,7 +958,6 @@
       "rotation" : 0.0,
       "textureFile" : "Ninurta",
       "radius" : 624.5932,
-      "velocity" : 0.010421430000000002,
       "inclination" : 65.32
     },
     "clouds" : {
@@ -414,7 +973,31 @@
     "id" : 41,
     "name" : "solarSystem",
     "orbit" : {
-      "orbittingBodyId" : 25,
+      "orbitting" : {
+        "id" : 25,
+        "name" : "Apollo",
+        "orbit" : {
+          "orbitting" : null,
+          "radius" : 0.0,
+          "velocity" : 0.0,
+          "position" : 0.0
+        },
+        "sphere" : {
+          "rotation" : 0.0,
+          "textureFile" : "Apollo",
+          "radius" : 1826.71,
+          "inclination" : 0.0
+        },
+        "clouds" : {
+          "textureFile" : null,
+          "radius" : 0.0
+        },
+        "ring" : {
+          "textureFile" : "",
+          "innerRadius" : 0.0,
+          "outerRadius" : 0.0
+        }
+      },
       "radius" : 69648.0,
       "velocity" : 0.0010320000000000001,
       "position" : 200.0
@@ -423,7 +1006,6 @@
       "rotation" : 0.0,
       "textureFile" : "solarSystem",
       "radius" : 100.0,
-      "velocity" : 0.010421430000000002,
       "inclination" : 0.0
     },
     "clouds" : {

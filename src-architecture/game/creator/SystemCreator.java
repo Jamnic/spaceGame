@@ -38,7 +38,7 @@ public abstract class SystemCreator {
         Clouds clouds = createClouds(cloudsFileName, radius);
 
         Sphere sphere = createSphere(gl, name, radius, rotationSpeed, inclination);
-        Orbit orbit = createOrbit(radius, orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
+        Orbit orbit = createOrbit(orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
 
         return addObject(new Planet(name, orbit, clouds, ring, sphere), bodies);
     }
@@ -52,7 +52,7 @@ public abstract class SystemCreator {
         orbitSpeed *= ORBITTING_PARAMETER;
 
         Sphere sphere = createSphere(gl, name, radius, rotationSpeed, inclination);
-        Orbit orbit = createOrbit(radius, orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
+        Orbit orbit = createOrbit(orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
 
         return addObject(new Wormhole(name, orbit, sphere, systemFromId, systemToId), bodies);
     }
@@ -63,7 +63,7 @@ public abstract class SystemCreator {
         radius *= RADIUS_PARAMETER;
 
         Sphere sphere = createSphere(gl, name, radius, rotationSpeed, 0);
-        Orbit orbit = new Orbit(-1, 0, 0, 0);
+        Orbit orbit = new Orbit(null, 0, 0, 0);
 
         return (Star) addObject(new Star(name, orbit, sphere), bodies);
     }
@@ -77,7 +77,7 @@ public abstract class SystemCreator {
         orbitSpeed *= ORBITTING_PARAMETER;
 
         Sphere sphere = createSphere(gl, name, radius, rotationSpeed, inclination);
-        Orbit orbit = createOrbit(radius, orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
+        Orbit orbit = createOrbit(orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
 
         return addObject(new Moon(name, orbit, sphere), bodies);
     }
@@ -103,9 +103,9 @@ public abstract class SystemCreator {
         return new Sphere(name, radius, rotationSpeed * ROTATION_PARAMETER, inclination);
     }
 
-    private static Orbit createOrbit(double radius, CelestialBody orbittingBody, double orbitRadius, double orbitSpeed,
+    private static Orbit createOrbit(CelestialBody orbittingBody, double orbitRadius, double orbitSpeed,
                                      double positionInOrbit) {
 
-        return new Orbit(orbittingBody.getId(), orbitRadius, orbitSpeed, positionInOrbit);
+        return new Orbit(orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
     }
 }

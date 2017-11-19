@@ -1,7 +1,6 @@
 package model.celestials.parts
 
 import com.fasterxml.jackson.annotation.JsonIgnore
-import com.jogamp.opengl.util.texture.Texture
 import engine.components.drawers.DrawableClouds
 import engine.utils.TextureLoader
 import model.celestials.CelestialBody
