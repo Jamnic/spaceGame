@@ -44,7 +44,6 @@
   } ],
   "celestialBodies" : [ {
     "id" : 0,
-    "type" : "STAR",
     "name" : "Sun",
     "orbit" : {
       "orbittingBodyId" : -1,
@@ -70,7 +69,6 @@
     }
   }, {
     "id" : 1,
-    "type" : "PLANET",
     "name" : "Mercury",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -96,7 +94,6 @@
     }
   }, {
     "id" : 2,
-    "type" : "PLANET",
     "name" : "VenusClouds",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -122,7 +119,6 @@
     }
   }, {
     "id" : 3,
-    "type" : "PLANET",
     "name" : "Earth",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -148,7 +144,6 @@
     }
   }, {
     "id" : 4,
-    "type" : "MOON",
     "name" : "Moon",
     "orbit" : {
       "orbittingBodyId" : 3,
@@ -174,7 +169,6 @@
     }
   }, {
     "id" : 5,
-    "type" : "PLANET",
     "name" : "Mars",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -200,7 +194,6 @@
     }
   }, {
     "id" : 6,
-    "type" : "PLANET",
     "name" : "Jupiter",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -226,7 +219,6 @@
     }
   }, {
     "id" : 7,
-    "type" : "MOON",
     "name" : "Io",
     "orbit" : {
       "orbittingBodyId" : 6,
@@ -252,7 +244,6 @@
     }
   }, {
     "id" : 8,
-    "type" : "MOON",
     "name" : "Europe",
     "orbit" : {
       "orbittingBodyId" : 6,
@@ -278,7 +269,6 @@
     }
   }, {
     "id" : 9,
-    "type" : "MOON",
     "name" : "Ganymede",
     "orbit" : {
       "orbittingBodyId" : 6,
@@ -304,7 +294,6 @@
     }
   }, {
     "id" : 10,
-    "type" : "MOON",
     "name" : "Callisto",
     "orbit" : {
       "orbittingBodyId" : 6,
@@ -330,7 +319,6 @@
     }
   }, {
     "id" : 11,
-    "type" : "PLANET",
     "name" : "Saturn",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -356,7 +344,6 @@
     }
   }, {
     "id" : 12,
-    "type" : "MOON",
     "name" : "Titan",
     "orbit" : {
       "orbittingBodyId" : 11,
@@ -382,7 +369,6 @@
     }
   }, {
     "id" : 13,
-    "type" : "MOON",
     "name" : "Rhea",
     "orbit" : {
       "orbittingBodyId" : 11,
@@ -408,7 +394,6 @@
     }
   }, {
     "id" : 14,
-    "type" : "MOON",
     "name" : "Iapetus",
     "orbit" : {
       "orbittingBodyId" : 11,
@@ -434,7 +419,6 @@
     }
   }, {
     "id" : 15,
-    "type" : "MOON",
     "name" : "Dione",
     "orbit" : {
       "orbittingBodyId" : 11,
@@ -460,7 +444,6 @@
     }
   }, {
     "id" : 16,
-    "type" : "MOON",
     "name" : "Tethys",
     "orbit" : {
       "orbittingBodyId" : 11,
@@ -486,7 +469,6 @@
     }
   }, {
     "id" : 17,
-    "type" : "PLANET",
     "name" : "Uranus",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -512,7 +494,6 @@
     }
   }, {
     "id" : 18,
-    "type" : "MOON",
     "name" : "Titania",
     "orbit" : {
       "orbittingBodyId" : 17,
@@ -538,7 +519,6 @@
     }
   }, {
     "id" : 19,
-    "type" : "MOON",
     "name" : "Oberon",
     "orbit" : {
       "orbittingBodyId" : 17,
@@ -564,7 +544,6 @@
     }
   }, {
     "id" : 20,
-    "type" : "MOON",
     "name" : "Umbriel",
     "orbit" : {
       "orbittingBodyId" : 17,
@@ -590,7 +569,6 @@
     }
   }, {
     "id" : 21,
-    "type" : "MOON",
     "name" : "Ariel",
     "orbit" : {
       "orbittingBodyId" : 17,
@@ -616,7 +594,6 @@
     }
   }, {
     "id" : 22,
-    "type" : "PLANET",
     "name" : "Neptune",
     "orbit" : {
       "orbittingBodyId" : 0,
@@ -642,7 +619,6 @@
     }
   }, {
     "id" : 23,
-    "type" : "MOON",
     "name" : "Triton",
     "orbit" : {
       "orbittingBodyId" : 22,
@@ -668,7 +644,6 @@
     }
   }, {
     "id" : 24,
-    "type" : "WORMHOLE",
     "name" : "BlueGalaxy",
     "orbit" : {
       "orbittingBodyId" : 0,

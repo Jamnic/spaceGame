@@ -1,13 +1,9 @@
 package engine.components.drawers;
 
-import com.jogamp.opengl.util.texture.Texture;
 import engine.utils.LightLoader;
-import engine.utils.TextureLoader;
 import game.architecture.Drawer;
 import model.celestials.CelestialBody;
-import model.celestials.CelestialBodyType;
 import model.celestials.parts.*;
-import model.type.DrawableResolution;
 
 import javax.media.opengl.GL2;
 
@@ -20,13 +16,9 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
     @Override
     protected void drawDrawable(GL2 gl, CelestialBody celestialBody) {
 
-        Sphere sphere = celestialBody.getSphere();
-        DrawableResolution sphereResolution = sphere.getResolution();
+        if (celestialBody.visible()) {
 
-        if (sphereResolution != DrawableResolution.INVISIBLE) {
-
-            CelestialBodyType type = celestialBody.getType();
-            if (CelestialBodyType.Companion.glowingCelestials().contains(type))
+            if (celestialBody.glows())
                 LightLoader.sunLight(gl);
             else
                 LightLoader.planetaryLight(gl);
@@ -34,7 +26,6 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
             translateWithCoords(gl, celestialBody.getOrbit().getCoords());
             drawSphere(gl, celestialBody);
         }
-
     }
 
     /* ========== PRIVATE ========== */
@@ -44,7 +35,7 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
 
         gl.glPushMatrix();
 
-        gl.glRotated(90, 1, 0, 0);
+        gl.glRotated(90, 1, 0, 0); // TODO how to avoid this rotation?
         gl.glRotated(sphere.getInclination(), 1, 0, 0);
         gl.glRotated(sphere.getRotation(), 0, 0, 1);
 

@@ -6,7 +6,6 @@ import javax.media.opengl.GL2;
 
 import model.Coords;
 import model.celestials.CelestialBody;
-import model.celestials.CelestialBodyType;
 import model.celestials.Wormhole;
 import model.celestials.parts.Clouds;
 import model.celestials.parts.Orbit;
@@ -108,7 +107,7 @@ public class CelestialBodyManager extends Manager<CelestialBody> {
     }
 
     private void checkCollisions(CelestialBody body, double distance) {
-        if (distance < body.getSphere().getRadius() && body.getType() == CelestialBodyType.WORMHOLE) {
+        if (distance < body.getSphere().getRadius() && body instanceof Wormhole) {
             Wormhole wormhole = (Wormhole) body;
 
             starSystemManager.warp(wormhole);

@@ -12,7 +12,6 @@
   "ships" : [ ],
   "celestialBodies" : [ {
     "id" : 25,
-    "type" : "STAR",
     "name" : "Apollo",
     "orbit" : {
       "orbittingBodyId" : -1,
@@ -38,7 +37,6 @@
     }
   }, {
     "id" : 26,
-    "type" : "PLANET",
     "name" : "Zorh",
     "orbit" : {
       "orbittingBodyId" : 25,
@@ -64,7 +62,6 @@
     }
   }, {
     "id" : 27,
-    "type" : "PLANET",
     "name" : "Anthony",
     "orbit" : {
       "orbittingBodyId" : 25,
@@ -90,7 +87,6 @@
     }
   }, {
     "id" : 28,
-    "type" : "PLANET",
     "name" : "David",
     "orbit" : {
       "orbittingBodyId" : 25,
@@ -116,7 +112,6 @@
     }
   }, {
     "id" : 29,
-    "type" : "MOON",
     "name" : "Murmillo",
     "orbit" : {
       "orbittingBodyId" : 28,
@@ -142,7 +137,6 @@
     }
   }, {
     "id" : 30,
-    "type" : "MOON",
     "name" : "Retarius",
     "orbit" : {
       "orbittingBodyId" : 28,
@@ -168,7 +162,6 @@
     }
   }, {
     "id" : 31,
-    "type" : "PLANET",
     "name" : "Alicia",
     "orbit" : {
       "orbittingBodyId" : 25,
@@ -194,7 +187,6 @@
     }
   }, {
     "id" : 32,
-    "type" : "MOON",
     "name" : "Julio",
     "orbit" : {
       "orbittingBodyId" : 31,
@@ -220,7 +212,6 @@
     }
   }, {
     "id" : 33,
-    "type" : "MOON",
     "name" : "Maya",
     "orbit" : {
       "orbittingBodyId" : 31,
@@ -246,7 +237,6 @@
     }
   }, {
     "id" : 34,
-    "type" : "MOON",
     "name" : "Leo",
     "orbit" : {
       "orbittingBodyId" : 31,
@@ -272,7 +262,6 @@
     }
   }, {
     "id" : 35,
-    "type" : "MOON",
     "name" : "Julia",
     "orbit" : {
       "orbittingBodyId" : 31,
@@ -298,7 +287,6 @@
     }
   }, {
     "id" : 36,
-    "type" : "PLANET",
     "name" : "Victor",
     "orbit" : {
       "orbittingBodyId" : 25,
@@ -324,7 +312,6 @@
     }
   }, {
     "id" : 37,
-    "type" : "MOON",
     "name" : "Hoth",
     "orbit" : {
       "orbittingBodyId" : 36,
@@ -350,7 +337,6 @@
     }
   }, {
     "id" : 38,
-    "type" : "MOON",
     "name" : "Polie",
     "orbit" : {
       "orbittingBodyId" : 36,
@@ -376,7 +362,6 @@
     }
   }, {
     "id" : 39,
-    "type" : "MOON",
     "name" : "Barr",
     "orbit" : {
       "orbittingBodyId" : 36,
@@ -402,7 +387,6 @@
     }
   }, {
     "id" : 40,
-    "type" : "PLANET",
     "name" : "Ninurta",
     "orbit" : {
       "orbittingBodyId" : 25,
@@ -428,7 +412,6 @@
     }
   }, {
     "id" : 41,
-    "type" : "WORMHOLE",
     "name" : "solarSystem",
     "orbit" : {
       "orbittingBodyId" : 25,

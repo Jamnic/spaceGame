@@ -82,20 +82,6 @@ public abstract class SystemCreator {
         return addObject(new Moon(name, orbit, sphere), bodies);
     }
 
-    protected static CelestialBody createAsteroid(GL2 gl, String name, double radius, double rotationSpeed,
-                                                  double inclination, CelestialBody orbittingBody, double orbitRadius, double orbitSpeed,
-                                                  double positionInOrbit, List<CelestialBody> bodies) throws IOException {
-
-        radius *= RADIUS_PARAMETER;
-        orbitRadius *= AU_PARAMETER;
-        orbitSpeed *= ORBITTING_PARAMETER;
-
-        Sphere sphere = createSphere(gl, name, radius, rotationSpeed, inclination);
-        Orbit orbit = createOrbit(radius, orbittingBody, orbitRadius, orbitSpeed, positionInOrbit);
-
-        return addObject(new Asteroid(name, orbit, sphere), bodies);
-    }
-
     private static CelestialBody addObject(CelestialBody body, List<CelestialBody> bodies) {
         bodies.add(body);
         GameComponentContainer.celestialBodyRepository.add(body);

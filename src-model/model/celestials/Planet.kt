@@ -8,4 +8,4 @@ class Planet(
         clouds: Clouds?,
         ring: Ring?,
         sphere: Sphere
-) : CelestialBody(CelestialBodyType.PLANET, name, orbit, sphere, clouds ?: EmptyClouds(), ring ?: EmptyRing())
+) : CelestialBody(name, orbit, sphere, clouds ?: EmptyClouds(), ring ?: EmptyRing())

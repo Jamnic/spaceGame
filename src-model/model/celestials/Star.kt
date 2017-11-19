@@ -7,4 +7,7 @@ class Star(
         name: String,
         orbit: Orbit,
         sphere: Sphere
-) : CelestialBody(CelestialBodyType.STAR, name, orbit, sphere)
+) : CelestialBody(name, orbit, sphere) {
+
+    override fun glows() = true
+}

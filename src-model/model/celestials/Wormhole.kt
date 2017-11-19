@@ -10,4 +10,7 @@ class Wormhole(
         sphere: Sphere,
         var systemFromId: Long,
         var systemToId: Long
-) : CelestialBody(CelestialBodyType.WORMHOLE, name, orbit, sphere)
+) : CelestialBody(name, orbit, sphere) {
+
+    override fun glows() = true
+}

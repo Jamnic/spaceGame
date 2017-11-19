@@ -7,4 +7,4 @@ class Moon(
         name: String,
         orbit: Orbit,
         sphere: Sphere
-) : CelestialBody(CelestialBodyType.MOON, name, orbit, sphere)
+) : CelestialBody(name, orbit, sphere)
