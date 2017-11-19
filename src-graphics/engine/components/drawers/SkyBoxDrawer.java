@@ -4,7 +4,7 @@ import javax.media.opengl.GL2;
 import javax.media.opengl.glu.GLU;
 import javax.media.opengl.glu.GLUquadric;
 
-import model.celestials.Sphere;
+import model.celestials.parts.Sphere;
 import model.system.parts.SkyBox;
 
 import com.jogamp.opengl.util.texture.Texture;

@@ -8,10 +8,10 @@ import static java.lang.Math.sin;
 import static java.lang.Math.sqrt;
 import static java.lang.Math.toRadians;
 import model.Coords;
-import model.celestials.Orbit;
-import model.celestials.Sphere;
-import model.ship.Engine;
-import model.ship.Position;
+import model.celestials.parts.Orbit;
+import model.celestials.parts.Sphere;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
 
 /**
  * Utility class which calculates distances between {@link Coords} objects and transforms them.

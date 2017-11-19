@@ -1,14 +1,13 @@
 package engine.managers;
 
-import game.architecture.Manager;
-
 import java.util.List;
 
 import javax.media.opengl.GL2;
 
-import model.celestials.types.Wormhole;
+import model.celestials.Wormhole;
 import model.ship.PlayerShip;
 import model.system.StarSystem;
+import game.architecture.Manager;
 
 /**
  * Manages the {@link StarSystem}.
@@ -27,7 +26,7 @@ public class StarSystemManager extends Manager<StarSystem> {
         for (StarSystem system : starSystems) {
             if (system.isVisible()) {
                 celestialBodyManager.draw(gl, system.getCelestialBodies());
-//                shipManager.draw(gl, system.getShips());
+                shipManager.draw(gl, system.getShips());
             }
         }
     }

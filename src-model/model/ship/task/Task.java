@@ -1,12 +1,12 @@
 package model.ship.task;
 
 import model.Coords;
-import model.ship.Control;
-import model.ship.Engine;
-import model.ship.Position;
 import model.ship.Ship;
 import engine.calculators.CoordsCalculator;
 import engine.calculators.DegreeCalculator;
+import model.ship.parts.Control;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
 
 public abstract class Task {
 

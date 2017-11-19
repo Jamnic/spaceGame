@@ -8,9 +8,7 @@ import javax.media.opengl.GLCapabilities;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.awt.GLJPanel;
 
-import model.ship.Engine;
 import model.ship.PlayerShip;
-import model.ship.Position;
 import engine.graphics.listeners.MainKeyListener;
 import engine.graphics.listeners.MainMouseListener;
 import engine.thread.GameTickThread;
@@ -19,6 +17,8 @@ import engine.utils.TextLogger;
 import game.GameLoader;
 import game.GameRunner;
 import game.architecture.GameComponentContainer;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
 
 /**
  * Class that should be used to render scene.
@@ -53,7 +53,6 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
 
         gl.glEnable(GL2.GL_DEPTH_TEST);
         gl.glDepthFunc(GL2.GL_LEQUAL);
-        gl.glShadeModel(GL2.GL_SMOOTH);
         gl.glHint(GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL2.GL_NICEST);
 
         systemLoader.loadSystem(gl, ship);
@@ -80,18 +79,6 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
         drawSystem(gl);
         drawMessages();
 
-        gl.glPushMatrix();
-
-        Position position = ship.getPosition();
-
-        gl.glRotated(90, 0, 1, 0);
-        gl.glRotated(-position.getRotationY(), 0, 0, 1);
-        gl.glRotated(-position.getRotationX(), 0, 1, 0);
-
-//        marker.target(gl, ship);
-
-        gl.glPopMatrix();
-
         camera.setCamera(gl, perspective);
 
         drawable.swapBuffers();
@@ -106,9 +93,8 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
     }
 
     public void shake() {
-        if (perspective < 70) {
+        if (perspective < 40)
             perspective += 1;
-        }
 
         shaker.shake();
     }
@@ -121,7 +107,7 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
     private static final long serialVersionUID = -7419599978736850207L;
 
     private PlayerShip ship;
-    private static double perspective = 60;
+    private double perspective = 60;
     private Shaker shaker = new Shaker();
     private Camera camera = new Camera();
     private TextDrawer textDrawer = new TextDrawer();
@@ -175,21 +161,18 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
         Engine engine = ship.getEngine();
 
         textDrawer.text2D("FPS: " + fpsCounter.fps(), 0, GameRunner.FRAME_HEIGHT - 10);
-        textDrawer.text2D("Velocity: " + TextLogger.twoDecimal(engine.getVelocity() * 100), 0,
-                GameRunner.FRAME_HEIGHT - 20);
-        textDrawer.text2D("Acceleration: " + TextLogger.twoDecimal(engine.getAcceleration() * 100), 0,
-                GameRunner.FRAME_HEIGHT - 30);
+        textDrawer.text2D("Velocity: " + TextLogger.twoDecimal(engine.getVelocity() * 100), 0, GameRunner.FRAME_HEIGHT - 20);
+        textDrawer
+                .text2D("Acceleration: " + TextLogger.twoDecimal(engine.getAcceleration() * 100), 0, GameRunner.FRAME_HEIGHT - 30);
         textDrawer.text2D(
-                "X: " + TextLogger.twoDecimal(position.getCoords().getX()) + ", Y: "
-                        + TextLogger.twoDecimal(position.getCoords().getY()) + ", Z: "
-                        + TextLogger.twoDecimal(position.getCoords().getZ()), 0, GameRunner.FRAME_HEIGHT - 40);
+                "X: " + TextLogger.twoDecimal(position.getCoords().getX()) + ", Y: " + TextLogger.twoDecimal(position.getCoords().getY())
+                        + ", Z: " + TextLogger.twoDecimal(position.getCoords().getZ()), 0, GameRunner.FRAME_HEIGHT - 40);
     }
 
     private void perspectiveCooldown() {
-        if (perspective > 60) {
+        if (perspective > 30)
             perspective -= 1.0;
-        } else {
+        else
             shaker.setCooldown(false);
-        }
     }
 }

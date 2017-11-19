@@ -7,9 +7,10 @@ import static game.architecture.Constants.MAX_TURBO_ACCELERATION;
 import static game.architecture.Constants.MAX_VELOCITY;
 import static game.architecture.Constants.TURBO_ACCELERATION_CHANGE;
 import static game.architecture.Constants.TURBO_MAX_VELOCITY;
-import model.ship.Control;
-import model.ship.Engine;
+
 import model.ship.Ship;
+import model.ship.parts.Control;
+import model.ship.parts.Engine;
 
 /**
  * Calculates velocity and acceleration of {@link Ship}s.

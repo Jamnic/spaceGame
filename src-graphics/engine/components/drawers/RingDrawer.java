@@ -1,13 +1,13 @@
 package engine.components.drawers;
 
-import game.architecture.Drawer;
-
 import javax.media.opengl.GL2;
 import javax.media.opengl.glu.GLUquadric;
 
-import model.celestials.Ring;
-
 import com.jogamp.opengl.util.texture.Texture;
+
+import engine.utils.TextureLoader;
+import game.architecture.Drawer;
+import model.celestials.parts.Ring;
 
 /**
  * Draws planetary ring.
@@ -23,16 +23,16 @@ public class RingDrawer extends Drawer<Ring> {
         double outerRadius = ring.getOuterRadius();
         double innerRadius = ring.getInnerRadius();
 
-        Texture texture = prepareTexture(gl, ring);
+        Texture texture = ring.getTexture();
+        if (texture == null) {
+            ring.setTexture(texture = TextureLoader.getTexture(gl, ring.getTextureFile()));
+        }
 
         texture.enable(gl);
         texture.bind(gl);
 
-        GLU.gluQuadricTexture(quadric, true);
-        GLU.gluCylinder(quadric, innerRadius, outerRadius, RING_THICKNESS, resolution, 1);
+        glu.gluCylinder(quadric, innerRadius, outerRadius, RING_THICKNESS, resolution, 1);
 
         texture.disable(gl);
-
-        GLU.gluDeleteQuadric(quadric);
     }
 }

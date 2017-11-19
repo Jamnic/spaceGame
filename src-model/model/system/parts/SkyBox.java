@@ -1,11 +1,9 @@
 package model.system.parts;
 
-import model.DrawableResolution;
-import model.celestials.Sphere;
+import model.celestials.parts.Sphere;
 import model.interfaces.Drawable;
 import model.system.StarSystem;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
+import model.type.DrawableResolution;
 
 /**
  * Class used to draw Sky Box for given {@link StarSystem} - every system has different star constellations. <br>
@@ -18,15 +16,15 @@ import com.fasterxml.jackson.annotation.JsonCreator;
  * 
  * @author Jamnic
  */
-public class SkyBox extends Drawable {
+public class SkyBox implements Drawable {
 
     private static final DrawableResolution SKY_BOX_RESOLUTION = DrawableResolution.MEDIUM;
 
     /* ========== PUBLIC ========== */
-    @JsonCreator
-    public SkyBox(Sphere skyBox) {
-        super(Sphere.class, skyBox.getTextureFile());
+    public SkyBox() {
+    }
 
+    public SkyBox(Sphere skyBox) {
         this.skyBox = skyBox;
         this.skyBox.setResolution(SKY_BOX_RESOLUTION);
     }

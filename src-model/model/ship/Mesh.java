@@ -1,12 +1,12 @@
 package model.ship;
 
-import game.architecture.Entity;
-
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jogamp.opengl.util.texture.Texture;
+
+import game.architecture.Entity;
 
 /**
  * Mesh of the {@link Ship}.

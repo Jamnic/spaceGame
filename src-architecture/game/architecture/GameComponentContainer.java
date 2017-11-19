@@ -9,7 +9,7 @@ import repositories.StarSystemRepository;
 
 import com.jogamp.opengl.util.gl2.GLUT;
 
-import engine.components.drawers.SphereDrawer;
+import engine.components.drawers.CelestialBodyDrawer;
 import engine.components.drawers.CloudsDrawer;
 import engine.components.drawers.RingDrawer;
 import engine.components.drawers.ShipDrawer;
@@ -29,7 +29,7 @@ public abstract class GameComponentContainer {
     protected static CelestialBodyManager celestialBodyManager = new CelestialBodyManager();
     protected static TaskManager taskManager = new TaskManager();
 
-    protected static SphereDrawer sphereDrawer = new SphereDrawer();
+    protected static CelestialBodyDrawer celestialBodyDrawer = new CelestialBodyDrawer();
     protected static CloudsDrawer cloudsDrawer = new CloudsDrawer();
     protected static RingDrawer ringDrawer = new RingDrawer();
     protected static ShipDrawer shipDrawer = new ShipDrawer();
@@ -42,6 +42,6 @@ public abstract class GameComponentContainer {
     public static ShipRepository shipRepository = new ShipRepository();
     public static MeshRepository meshRepository = new MeshRepository();
 
-    protected static final GLU GLU = GLUHolder.GLU;
-    protected static final GLUT GLUT = GLUTHolder.GLUT;
+    protected static final GLU glu = GLUHolder.GLU;
+    protected static final GLUT glut = GLUTHolder.GLUT;
 }

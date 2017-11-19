@@ -22,8 +22,8 @@ import engine.graphics.window.GameWindow;
  */
 public final class GameRunner {
 
-	public static final int FRAME_WIDTH = 1280;
-	public static final int FRAME_HEIGHT = 768;
+	public static final int FRAME_WIDTH = 1200;
+	public static final int FRAME_HEIGHT = 700;
 	private static final String TITLE = "Space game";
 
 	/* ========== PUBLIC ========== */

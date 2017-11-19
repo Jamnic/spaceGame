@@ -6,31 +6,19 @@ import javax.media.opengl.glu.GLU;
 import engine.graphics.holders.GLUHolder;
 import game.GameRunner;
 
-/**
- * Class that stores information about camera settings.
- */
 public class Camera {
 
-    private static final double Z_NEAR = 10;
-    private static final int Z_FAR = 1000000;
-    public static double PERSPECTIVE;
+    private static final GLU glu = GLUHolder.GLU;
+    public static final int Z_FAR = 10000000;
 
-    /* ========== PUBLIC ========== */
     public void setCamera(GL2 gl, double perspective) {
         gl.glMatrixMode(GL2.GL_PROJECTION);
         gl.glLoadIdentity();
 
-        double aspectRatio = (double) GameRunner.FRAME_WIDTH / (double) GameRunner.FRAME_HEIGHT;
-        
-        PERSPECTIVE = perspective;
-
-        GLU.gluPerspective(perspective, aspectRatio, Z_NEAR, Z_FAR);
-        GLU.gluLookAt(-1, 0, 0, 0, 0, 0, 0, 1, 0);
+        glu.gluPerspective(perspective, (double) GameRunner.FRAME_WIDTH / (double) GameRunner.FRAME_HEIGHT, 0.1, Z_FAR);
+        glu.gluLookAt(-0.1, 0, 0, 0, 0, 0, 0, 1, 0);
 
         gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLoadIdentity();
     }
-
-    /* ========== PRIVATE ========== */
-    private static final GLU GLU = GLUHolder.GLU;
 }

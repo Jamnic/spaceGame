@@ -1,14 +1,15 @@
 package engine.managers;
 
-import game.architecture.Constants;
-import game.architecture.Manager;
-
 import java.util.List;
+import java.util.Random;
 
 import model.Coords;
 import model.ship.Ship;
 import model.ship.task.MovementTask;
 import model.ship.task.Task;
+import game.architecture.Constants;
+import game.architecture.Manager;
+import game.creator.SystemCreator;
 
 /**
  * Manages the ship tasks and designations.
@@ -29,7 +30,7 @@ public class TaskManager extends Manager<Task> {
                 taskList.remove(currentTask);
             }
         } else {
-//            Random random = new Random();
+            Random random = new Random();
             // int rand = new Random().nextInt(2);
 
             Task task;

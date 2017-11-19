@@ -9,16 +9,15 @@ import java.awt.event.MouseEvent;
 import model.Coords;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import model.ship.parts.Control;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
 
 public class PlayerShip extends Ship {
-
-    private Coords2D target;
 
     /* ========== PUBLIC ========== */
     public PlayerShip(Coords coords) {
         super(new Position(coords, 0, 0), new Engine(1), null, 0);
-        
-        target = new Coords2D(0, 0);
     }
 
     public void mouseMoved(MouseEvent e) {
@@ -43,7 +42,6 @@ public class PlayerShip extends Ship {
         } else if (key == KeyEvent.VK_SPACE) {
             control.setTurbo(true);
             control.setAccelerating(true);
-            pane.shake();
         }
     }
 
@@ -59,7 +57,6 @@ public class PlayerShip extends Ship {
         } else if (key == KeyEvent.VK_SPACE) {
             control.setTurbo(false);
             control.setAccelerating(false);
-            pane.endOfShake();
         }
     }
 
@@ -69,13 +66,5 @@ public class PlayerShip extends Ship {
 
     public void setPane(GraphicsPane graphicsPane) {
         this.pane = graphicsPane;
-    }
-
-    public Coords2D getTarget() {
-        return target;
-    }
-
-    public void setTarget(Coords2D target) {
-        this.target = target;
     }
 }

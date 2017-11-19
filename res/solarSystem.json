@@ -1,29 +1,21 @@
 {
   "id" : 0,
   "skyBox" : {
-    "id" : 26,
-    "textureFile" : "solarSystem",
-    "visible" : true,
     "skyBox" : {
-      "id" : 25,
-      "textureFile" : "solarSystem",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "solarSystem",
       "radius" : 110.0,
+      "velocity" : 0.0,
       "rotation" : 0.0,
-      "inclination" : 0.0,
-      "angularVelocity" : 0.0,
-      "type" : "STAR"
+      "inclination" : 0.0
     }
   },
   "ships" : [ {
     "id" : 1,
-    "textureFile" : "",
-    "visible" : true,
     "position" : {
       "coords" : {
-        "x" : 7500.0,
+        "x" : 15000.0,
         "y" : 0.0,
         "z" : 0.0
       },
@@ -43,7 +35,13 @@
       "accelerating" : false,
       "braking" : false
     },
-    "mesh" : null,
+    "mesh" : {
+      "id" : 0,
+      "textureFile" : "alien-mothership-green",
+      "vertexIndex" : 0,
+      "normalIndex" : 0,
+      "textureIndex" : 0
+    },
     "size" : 1.0
   } ],
   "celestialBodies" : [ {
@@ -51,537 +49,483 @@
     "name" : "Sun",
     "orbit" : {
       "radius" : 0.0,
+      "velocity" : 0.0,
       "position" : 0.0,
-      "orbittingBodyId" : -1,
-      "angularVelocity" : 0.0
+      "orbittingBodyId" : -1
     },
     "sphere" : {
-      "id" : 0,
-      "textureFile" : "Sun",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Sun",
       "radius" : 1906.71,
+      "velocity" : 0.0019732000000000005,
       "rotation" : 0.0,
-      "inclination" : 0.0,
-      "angularVelocity" : 5.748000000000001E-7,
-      "type" : "STAR"
-    }
+      "inclination" : 0.0
+    },
+    "type" : "STAR"
   }, {
     "id" : 1,
     "name" : "Mercury",
     "orbit" : {
-      "radius" : 2903.25,
+      "radius" : 5806.5,
+      "velocity" : 0.004787,
       "position" : 120.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 9.447167709605617E-5
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 1,
-      "textureFile" : "Mercury",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Mercury",
       "radius" : 23.95,
+      "velocity" : 1.0892000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 0.03,
-      "angularVelocity" : 2.5600000000000007E-7,
-      "type" : "PLANET"
-    }
+      "inclination" : 0.03
+    },
+    "type" : "PLANET"
   }, {
     "id" : 2,
     "name" : "VenusClouds",
     "orbit" : {
-      "radius" : 5424.75,
+      "radius" : 10849.5,
+      "velocity" : 0.0035020000000000003,
       "position" : 60.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 3.6987846417773046E-5
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 2,
-      "textureFile" : "VenusClouds",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "VenusClouds",
       "radius" : 60.230000000000004,
+      "velocity" : -6.52E-6,
       "rotation" : 0.0,
-      "inclination" : 2.64,
-      "angularVelocity" : -6.17E-8,
-      "type" : "PLANET"
-    }
+      "inclination" : 2.64
+    },
+    "type" : "PLANET"
   }, {
     "id" : 3,
     "name" : "Earth",
     "orbit" : {
-      "radius" : 7500.0,
+      "radius" : 15000.0,
+      "velocity" : 0.002978,
       "position" : 60.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 2.275024418532789E-5
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 3,
-      "textureFile" : "Earth",
-      "visible" : true,
       "ring" : null,
       "clouds" : {
-        "id" : 0,
         "textureFile" : "EarthClouds",
-        "visible" : true,
         "radius" : 63.300000000000004
       },
+      "textureFile" : "Earth",
       "radius" : 62.300000000000004,
+      "velocity" : 0.0016012100000000003,
       "rotation" : 0.0,
-      "inclination" : 23.44,
-      "angularVelocity" : 1.4400000000000003E-5,
-      "type" : "PLANET"
-    }
+      "inclination" : 23.44
+    },
+    "type" : "PLANET"
   }, {
     "id" : 4,
     "name" : "Moon",
     "orbit" : {
-      "radius" : 960.0,
+      "radius" : 1920.0,
+      "velocity" : 1.022E-4,
       "position" : 0.0,
-      "orbittingBodyId" : 3,
-      "angularVelocity" : 6.099613193996889E-6
+      "orbittingBodyId" : 3
     },
     "sphere" : {
-      "id" : 4,
-      "textureFile" : "Moon",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Moon",
       "radius" : 17.38,
+      "velocity" : 1.665E-5,
       "rotation" : 0.0,
-      "inclination" : 1.54,
-      "angularVelocity" : 5.488610000000001E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 1.54
+    },
+    "type" : "MOON"
   }, {
     "id" : 5,
     "name" : "Mars",
     "orbit" : {
-      "radius" : 11427.0,
+      "radius" : 22854.0,
+      "velocity" : 0.002416,
       "position" : 100.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 1.2113993463166791E-5
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 5,
-      "textureFile" : "Mars",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Mars",
       "radius" : 34.02,
+      "velocity" : 8.682200000000002E-4,
       "rotation" : 0.0,
-      "inclination" : 25.19,
-      "angularVelocity" : 1.4620200000000003E-5,
-      "type" : "PLANET"
-    }
+      "inclination" : 25.19
+    },
+    "type" : "PLANET"
   }, {
     "id" : 6,
     "name" : "Jupiter",
     "orbit" : {
-      "radius" : 39032.25,
+      "radius" : 78064.5,
+      "velocity" : 0.0017820000000000002,
       "position" : 130.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 2.6158133105909273E-6
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 6,
-      "textureFile" : "Jupiter",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Jupiter",
       "radius" : 710.95,
+      "velocity" : 0.045360000000000004,
       "rotation" : 0.0,
-      "inclination" : 3.12,
-      "angularVelocity" : 3.635280000000001E-5,
-      "type" : "PLANET"
-    }
+      "inclination" : 3.12
+    },
+    "type" : "PLANET"
   }, {
     "id" : 7,
     "name" : "Io",
     "orbit" : {
-      "radius" : 1053.75,
+      "radius" : 2107.5,
+      "velocity" : 0.001307,
       "position" : 100.0,
-      "orbittingBodyId" : 6,
-      "angularVelocity" : 7.106579722286937E-5
+      "orbittingBodyId" : 6
     },
     "sphere" : {
-      "id" : 7,
-      "textureFile" : "Io",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Io",
       "radius" : 18.21,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.0,
-      "angularVelocity" : 4.718000000000001E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 1.0
+    },
+    "type" : "MOON"
   }, {
     "id" : 8,
     "name" : "Europe",
     "orbit" : {
-      "radius" : 1676.25,
+      "radius" : 3352.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 80.0,
-      "orbittingBodyId" : 6,
-      "angularVelocity" : 5.127139106316092E-6
+      "orbittingBodyId" : 6
     },
     "sphere" : {
-      "id" : 8,
-      "textureFile" : "Europe",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Europe",
       "radius" : 15.610000000000001,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.0,
-      "angularVelocity" : 5.505000000000001E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 1.0
+    },
+    "type" : "MOON"
   }, {
     "id" : 9,
     "name" : "Ganymede",
     "orbit" : {
-      "radius" : 2677.5,
+      "radius" : 5355.0,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 100.0,
-      "orbittingBodyId" : 6,
-      "angularVelocity" : 3.2098475917693182E-6
+      "orbittingBodyId" : 6
     },
     "sphere" : {
-      "id" : 9,
-      "textureFile" : "Ganymede",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Ganymede",
       "radius" : 26.310000000000002,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.0,
-      "angularVelocity" : 3.266000000000001E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 1.0
+    },
+    "type" : "MOON"
   }, {
     "id" : 10,
     "name" : "Callisto",
     "orbit" : {
-      "radius" : 4706.25,
+      "radius" : 9412.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 100.0,
-      "orbittingBodyId" : 6,
-      "angularVelocity" : 1.8261603032058113E-6
+      "orbittingBodyId" : 6
     },
     "sphere" : {
-      "id" : 10,
-      "textureFile" : "Callisto",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Callisto",
       "radius" : 24.1,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.0,
-      "angularVelocity" : 3.5650000000000005E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 1.0
+    },
+    "type" : "MOON"
   }, {
     "id" : 11,
     "name" : "Saturn",
     "orbit" : {
-      "radius" : 71527.5,
+      "radius" : 143055.0,
+      "velocity" : 9.630000000000001E-4,
       "position" : 21.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 7.71393319647664E-7
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 11,
-      "textureFile" : "Saturn",
-      "visible" : true,
       "ring" : {
-        "id" : 0,
         "textureFile" : "SaturnRings",
-        "visible" : true,
         "innerRadius" : 840.95,
         "outerRadius" : 1440.95
       },
       "clouds" : null,
+      "textureFile" : "Saturn",
       "radius" : 640.95,
+      "velocity" : 0.035500000000000004,
       "rotation" : 0.0,
-      "inclination" : 26.73,
-      "angularVelocity" : 3.3749200000000005E-5,
-      "type" : "PLANET"
-    }
+      "inclination" : 26.73
+    },
+    "type" : "PLANET"
   }, {
     "id" : 12,
     "name" : "Titan",
     "orbit" : {
-      "radius" : 3056.25,
+      "radius" : 6112.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 51.0,
-      "orbittingBodyId" : 11,
-      "angularVelocity" : 2.8120627981880897E-6
+      "orbittingBodyId" : 11
     },
     "sphere" : {
-      "id" : 12,
-      "textureFile" : "Titan",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Titan",
       "radius" : 25.75,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 0.31,
-      "angularVelocity" : 3.3370000000000003E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 0.31
+    },
+    "type" : "MOON"
   }, {
     "id" : 13,
     "name" : "Rhea",
     "orbit" : {
-      "radius" : 1316.25,
+      "radius" : 2632.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 10.0,
-      "orbittingBodyId" : 11,
-      "angularVelocity" : 6.529433562744425E-6
+      "orbittingBodyId" : 11
     },
     "sphere" : {
-      "id" : 13,
-      "textureFile" : "Rhea",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Rhea",
       "radius" : 7.640000000000001,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 0.33,
-      "angularVelocity" : 1.1249000000000002E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 0.33
+    },
+    "type" : "MOON"
   }, {
     "id" : 14,
     "name" : "Iapetus",
     "orbit" : {
-      "radius" : 8902.5,
+      "radius" : 17805.0,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 120.0,
-      "orbittingBodyId" : 11,
-      "angularVelocity" : 9.653880288640662E-7
+      "orbittingBodyId" : 11
     },
     "sphere" : {
-      "id" : 14,
-      "textureFile" : "Iapetus",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Iapetus",
       "radius" : 7.18,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 8.3,
-      "angularVelocity" : 1.1969000000000003E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 8.3
+    },
+    "type" : "MOON"
   }, {
     "id" : 15,
     "name" : "Dione",
     "orbit" : {
-      "radius" : 945.0,
+      "radius" : 1890.0,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 70.0,
-      "orbittingBodyId" : 11,
-      "angularVelocity" : 9.094568176679736E-6
+      "orbittingBodyId" : 11
     },
     "sphere" : {
-      "id" : 15,
-      "textureFile" : "Dione",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Dione",
       "radius" : 5.59,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 0.03,
-      "angularVelocity" : 1.5374000000000003E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 0.03
+    },
+    "type" : "MOON"
   }, {
     "id" : 16,
     "name" : "Tethys",
     "orbit" : {
-      "radius" : 1091.25,
+      "radius" : 2182.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 70.0,
-      "orbittingBodyId" : 11,
-      "angularVelocity" : 7.875708524135028E-6
+      "orbittingBodyId" : 11
     },
     "sphere" : {
-      "id" : 16,
-      "textureFile" : "Tethys",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Tethys",
       "radius" : 5.29,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.09,
-      "angularVelocity" : 1.6231000000000002E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 1.09
+    },
+    "type" : "MOON"
   }, {
     "id" : 17,
     "name" : "Uranus",
     "orbit" : {
-      "radius" : 91434.0,
+      "radius" : 182868.0,
+      "velocity" : 6.79E-4,
       "position" : 100.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 4.254854243430551E-7
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 17,
-      "textureFile" : "Uranus",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Uranus",
       "radius" : 410.95,
+      "velocity" : 0.009320000000000002,
       "rotation" : 0.0,
-      "inclination" : 97.77,
-      "angularVelocity" : 2.0892700000000004E-5,
-      "type" : "PLANET"
-    }
+      "inclination" : 97.77
+    },
+    "type" : "PLANET"
   }, {
     "id" : 18,
     "name" : "Titania",
     "orbit" : {
-      "radius" : 1091.25,
+      "radius" : 2182.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 70.0,
-      "orbittingBodyId" : 17,
-      "angularVelocity" : 7.875708524135028E-6
+      "orbittingBodyId" : 17
     },
     "sphere" : {
-      "id" : 18,
-      "textureFile" : "Titania",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Titania",
       "radius" : 7.88,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.09,
-      "angularVelocity" : 1.089E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 1.09
+    },
+    "type" : "MOON"
   }, {
     "id" : 19,
     "name" : "Oberon",
     "orbit" : {
-      "radius" : 1458.75,
+      "radius" : 2917.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 170.0,
-      "orbittingBodyId" : 17,
-      "angularVelocity" : 5.891596865098439E-6
+      "orbittingBodyId" : 17
     },
     "sphere" : {
-      "id" : 19,
-      "textureFile" : "Oberon",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Oberon",
       "radius" : 7.61,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.09,
-      "angularVelocity" : 1.1293000000000001E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 1.09
+    },
+    "type" : "MOON"
   }, {
     "id" : 20,
     "name" : "Umbriel",
     "orbit" : {
-      "radius" : 663.75,
+      "radius" : 1327.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 270.0,
-      "orbittingBodyId" : 17,
-      "angularVelocity" : 1.2948198760018605E-5
+      "orbittingBodyId" : 17
     },
     "sphere" : {
-      "id" : 20,
-      "textureFile" : "Umbriel",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Umbriel",
       "radius" : 5.84,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.09,
-      "angularVelocity" : 1.4698000000000003E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 1.09
+    },
+    "type" : "MOON"
   }, {
     "id" : 21,
     "name" : "Ariel",
     "orbit" : {
-      "radius" : 476.25,
+      "radius" : 952.5,
+      "velocity" : 1.5000000000000001E-4,
       "position" : 80.0,
-      "orbittingBodyId" : 17,
-      "angularVelocity" : 1.8045914807270023E-5
+      "orbittingBodyId" : 17
     },
     "sphere" : {
-      "id" : 21,
-      "textureFile" : "Ariel",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Ariel",
       "radius" : 5.78,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 1.09,
-      "angularVelocity" : 1.4846000000000002E-6,
-      "type" : "MOON"
-    }
+      "inclination" : 1.09
+    },
+    "type" : "MOON"
   }, {
     "id" : 22,
     "name" : "Neptune",
     "orbit" : {
-      "radius" : 105516.75,
+      "radius" : 211033.5,
+      "velocity" : 5.480000000000001E-4,
       "position" : 0.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 2.975649569681507E-7
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 22,
-      "textureFile" : "Neptune",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Neptune",
       "radius" : 400.95,
+      "velocity" : 0.009275520000000002,
       "rotation" : 0.0,
-      "inclination" : 15.58,
-      "angularVelocity" : 2.1459300000000003E-5,
-      "type" : "PLANET"
-    }
+      "inclination" : 15.58
+    },
+    "type" : "PLANET"
   }, {
     "id" : 23,
     "name" : "Triton",
     "orbit" : {
-      "radius" : 960.0,
+      "radius" : 1920.0,
+      "velocity" : -4.75E-4,
       "position" : 70.0,
-      "orbittingBodyId" : 22,
-      "angularVelocity" : -2.8349474238243862E-5
+      "orbittingBodyId" : 22
     },
     "sphere" : {
-      "id" : 23,
-      "textureFile" : "Triton",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "Triton",
       "radius" : 13.530000000000001,
+      "velocity" : 1.5000000000000002E-5,
       "rotation" : 0.0,
-      "inclination" : 156.8,
-      "angularVelocity" : 6.350000000000002E-7,
-      "type" : "MOON"
-    }
+      "inclination" : 156.8
+    },
+    "type" : "MOON"
   }, {
     "id" : 24,
     "name" : "BlueGalaxy",
     "orbit" : {
-      "radius" : 34824.0,
+      "radius" : 69648.0,
+      "velocity" : 0.0010320000000000001,
       "position" : 180.0,
-      "orbittingBodyId" : 0,
-      "angularVelocity" : 1.6979452233373814E-6
+      "orbittingBodyId" : 0
     },
     "sphere" : {
-      "id" : 24,
-      "textureFile" : "BlueGalaxy",
-      "visible" : true,
       "ring" : null,
       "clouds" : null,
+      "textureFile" : "BlueGalaxy",
       "radius" : 100.0,
+      "velocity" : 0.010421430000000002,
       "rotation" : 0.0,
-      "inclination" : 0.0,
-      "angularVelocity" : 1.0430000000000002E-5,
-      "type" : "WORMHOLE"
+      "inclination" : 0.0
     },
+    "type" : "WORMHOLE",
     "systemFromId" : 0,
     "systemToId" : 1
   } ],

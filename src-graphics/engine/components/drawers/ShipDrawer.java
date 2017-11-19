@@ -1,9 +1,5 @@
 package engine.components.drawers;
 
-import engine.utils.LightLoader;
-import engine.utils.TextureLoader;
-import game.architecture.Drawer;
-
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
@@ -11,11 +7,16 @@ import javax.media.opengl.GL;
 import javax.media.opengl.GL2;
 
 import model.ship.Mesh;
-import model.ship.Position;
 import model.ship.Ship;
 
 import com.jogamp.common.nio.Buffers;
 import com.jogamp.opengl.util.texture.Texture;
+
+import engine.utils.LightLoader;
+import engine.utils.TextureLoader;
+import game.architecture.Drawer;
+import model.ship.parts.Position;
+import model.type.DrawableResolution;
 
 /**
  * Component responsible for drawing {@link Ship}.
@@ -31,37 +32,40 @@ public final class ShipDrawer extends Drawer<Ship> {
     /* ========== PROTECTED ========== */
     protected void drawDrawable(GL2 gl, Ship ship) {
 
-        if (ship != null) {
+        if (ship.getResolution() != DrawableResolution.INVISIBLE) {
+            Mesh mesh = ship.getMesh();
+            if (mesh != null) {
 
-            Position position = ship.getPosition();
+                Position position = ship.getPosition();
 
-            translateWithCoords(gl, position.getCoords());
+                translateWithCoords(gl, position.getCoords());
 
-            gl.glRotated(-90, 0, 1, 0); // TODO obrót modelu
+                gl.glRotated(-90, 0, 1, 0); // TODO obrï¿½t modelu
 
-            gl.glRotated(position.getRotationX(), 0, 1, 0);
-            gl.glRotated(position.getRotationY(), 1, 0, 0);
+                gl.glRotated(position.getRotationX(), 0, 1, 0);
+                gl.glRotated(position.getRotationY(), 1, 0, 0);
 
-            double size = ship.getSize();
-            gl.glScaled(size, size, size);
+                double size = ship.getSize();
+                gl.glScaled(size, size, size);
 
-            LightLoader.planetaryLight(gl);
+                LightLoader.planetaryLight(gl);
 
-            Texture texture = ship.getTexture();
-            if (texture == null) {
-                texture = initialize(gl, ship.getMesh());
+                Texture texture = mesh.getTexture();
+                if (texture == null) {
+                    texture = initialize(gl, mesh);
+                }
+
+                gl.glVertexPointer(3, GL.GL_FLOAT, 0, points);
+                gl.glTexCoordPointer(2, GL.GL_FLOAT, 0, textures);
+                gl.glNormalPointer(GL.GL_FLOAT, 0, normals);
+
+                texture.enable(gl);
+                texture.bind(gl);
+
+                gl.glDrawElements(GL2.GL_TRIANGLES, faces.capacity(), GL2.GL_UNSIGNED_INT, faces);
+
+                texture.disable(gl);
             }
-
-            gl.glVertexPointer(3, GL.GL_FLOAT, 0, points);
-            gl.glTexCoordPointer(2, GL.GL_FLOAT, 0, textures);
-            gl.glNormalPointer(GL.GL_FLOAT, 0, normals);
-
-            texture.enable(gl);
-            texture.bind(gl);
-
-            gl.glDrawElements(GL2.GL_TRIANGLES, faces.capacity(), GL2.GL_UNSIGNED_INT, faces);
-
-            texture.disable(gl);
         }
     }
 
@@ -123,19 +127,19 @@ public final class ShipDrawer extends Drawer<Ship> {
         return texture;
     }
 
-    // private float[] addArrays(FloatBuffer buffer1, FloatBuffer buffer2) {
-    // float array[] = new float[buffer1.capacity() + buffer2.capacity()];
-    //
-    // int i = 0;
-    //
-    // for (i = 0; i < buffer2.capacity(); ++i) {
-    // array[i] = buffer2.get(i);
-    // }
-    //
-    // for (int j = 0; j < buffer1.capacity(); ++j) {
-    // array[i + j] = buffer1.get(j);
-    // }
-    //
-    // return array;
-    // }
+    private float[] addArrays(FloatBuffer buffer1, FloatBuffer buffer2) {
+        float array[] = new float[buffer1.capacity() + buffer2.capacity()];
+
+        int i = 0;
+
+        for (i = 0; i < buffer2.capacity(); ++i) {
+            array[i] = buffer2.get(i);
+        }
+
+        for (int j = 0; j < buffer1.capacity(); ++j) {
+            array[i + j] = buffer1.get(j);
+        }
+
+        return array;
+    }
 }

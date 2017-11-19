@@ -1,25 +1,22 @@
 package engine.managers;
 
-import engine.calculators.CoordsCalculator;
-import engine.calculators.DegreeCalculator;
-import engine.graphics.Camera;
-import game.architecture.Manager;
-
 import java.util.List;
 
 import javax.media.opengl.GL2;
 
 import model.Coords;
-import model.DrawableResolution;
 import model.celestials.CelestialBody;
-import model.celestials.Clouds;
-import model.celestials.Orbit;
-import model.celestials.Ring;
-import model.celestials.Sphere;
-import model.celestials.SphereType;
-import model.celestials.types.Wormhole;
+import model.celestials.CelestialBodyType;
+import model.celestials.Wormhole;
+import model.celestials.parts.Clouds;
+import model.celestials.parts.Orbit;
+import model.celestials.parts.Ring;
+import model.celestials.parts.Sphere;
 import model.ship.PlayerShip;
-import model.ship.Position;
+import engine.calculators.CoordsCalculator;
+import engine.calculators.DegreeCalculator;
+import game.architecture.Manager;
+import model.type.DrawableResolution;
 
 /**
  * Manages the {@link CelestialBody} objects.
@@ -35,11 +32,7 @@ public class CelestialBodyManager extends Manager<CelestialBody> {
      */
     public void draw(GL2 gl, List<CelestialBody> celestialBodies) {
         for (CelestialBody body : celestialBodies) {
-
-            gl.glPushMatrix();
-            sphereDrawer.translateWithCoords(gl, body.getOrbit().getCoords());
-            sphereDrawer.draw(gl, body.getSphere());
-            gl.glPopMatrix();
+            celestialBodyDrawer.draw(gl, body);
         }
     }
 
@@ -80,51 +73,42 @@ public class CelestialBodyManager extends Manager<CelestialBody> {
         }
     }
 
-    private void updateDistance(CelestialBody body, PlayerShip playerShip) {
+    private void updateDistance(CelestialBody body, PlayerShip ship) {
 
         // Parameters
-        Position position = playerShip.getPosition();
-        Coords playerShipCoords = position.getCoords();
+        Coords shipCoords = ship.getPosition().getCoords();
         Coords bodyCoords = body.getOrbit().getCoords();
         Sphere sphere = body.getSphere();
 
         // Distance
-        double distance = CoordsCalculator.distance(bodyCoords, playerShipCoords);
-        setResolution(sphere, distance, position, bodyCoords);
-
-        if (body.getName().equals("Uranus")) {
-            DegreeCalculator.pickTarget(position, playerShip.getTarget(), Camera.PERSPECTIVE, bodyCoords);
-        }
+        double distance = CoordsCalculator.distance(bodyCoords, shipCoords);
+        setResolution(sphere, distance);
 
         // Collisions
         checkCollisions(body, distance);
 
         // Gravity
-        CoordsCalculator.gravityAttraction(playerShipCoords, bodyCoords, sphere);
+        CoordsCalculator.gravityAttraction(shipCoords, bodyCoords, sphere);
     }
 
-    private void setResolution(Sphere sphere, double distance, Position position, Coords bodyCoords) {
+    private void setResolution(Sphere sphere, double distance) {
 
-        boolean isVisible = DegreeCalculator.checkVisibility(position, Camera.PERSPECTIVE, bodyCoords);
         DrawableResolution resolution = DrawableResolution.determineResolution(sphere.getRadius(), distance);
         sphere.setResolution(resolution);
-        sphere.setVisible(isVisible);
 
         Clouds clouds = sphere.getClouds();
         if (clouds != null) {
             clouds.setResolution(resolution);
-            clouds.setVisible(isVisible);
         }
 
         Ring ring = sphere.getRing();
         if (ring != null) {
             ring.setResolution(resolution);
-            ring.setVisible(isVisible);
         }
     }
 
     private void checkCollisions(CelestialBody body, double distance) {
-        if (distance < body.getSphere().getRadius() && body.getSphere().getType() == SphereType.WORMHOLE) {
+        if (distance < body.getSphere().getRadius() && body.getType() == CelestialBodyType.WORMHOLE) {
             Wormhole wormhole = (Wormhole) body;
 
             starSystemManager.warp(wormhole);

@@ -1,22 +1,21 @@
 package engine.managers;
 
-import engine.calculators.CoordsCalculator;
-import engine.calculators.DegreeCalculator;
-import engine.calculators.VelocityCalculator;
-import game.architecture.Constants;
-import game.architecture.Manager;
-
 import java.util.List;
 
 import javax.media.opengl.GL2;
 
 import model.Coords;
-import model.DrawableResolution;
-import model.ship.Control;
-import model.ship.Engine;
 import model.ship.PlayerShip;
-import model.ship.Position;
 import model.ship.Ship;
+import engine.calculators.CoordsCalculator;
+import engine.calculators.DegreeCalculator;
+import engine.calculators.VelocityCalculator;
+import game.architecture.Constants;
+import game.architecture.Manager;
+import model.ship.parts.Control;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
+import model.type.DrawableResolution;
 
 /**
  * Manages the {@link Ship} objects. Updates positions and draws them.
@@ -77,9 +76,6 @@ public class ShipManager extends Manager<Ship> {
         // Distance
         double distance = CoordsCalculator.distance(shipCoords, playerShipCoords);
         setResolution(ship, size, distance);
-
-        // Visibility
-        // ship.setVisible(DegreeCalculator.checkVisibility(playerShip.getPosition(), Camera.PERSPECTIVE, shipCoords));
 
         // TODO collisions
     }

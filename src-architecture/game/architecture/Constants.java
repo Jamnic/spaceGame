@@ -9,7 +9,7 @@ public interface Constants {
 
     // System creation constants
     double SCALE = 0.01;
-    double AU_PARAMETER = 1500000 * SCALE * 0.5;
+    double AU_PARAMETER = 1500000 * SCALE;
 
     double ROTATION_PARAMETER = 0.0001 * SCALE; // change to angular velocity
     double ORBITTING_PARAMETER = 0.01 * SCALE;
@@ -46,13 +46,10 @@ public interface Constants {
     double GRAVITY_CONSTANT = 0.00001;
     double TWO_PI = Math.PI * 2.0;
     double VOLUME_PARAMETER = 1.33333333;
-
+    
     // Time constants
     int TICKS_PER_SECOND = 60;
     int SECOND = 1000;
-
+    
     int K = 1000;
-
-    // Drawing constants
-    double BLEND_ALPHA = 0.1;
 }

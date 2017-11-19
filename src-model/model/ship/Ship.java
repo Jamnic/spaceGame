@@ -1,11 +1,16 @@
 package model.ship;
 
-import model.DrawableResolution;
 import model.interfaces.Drawable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class Ship extends Drawable {
+import game.architecture.Entity;
+import model.ship.parts.Control;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
+import model.type.DrawableResolution;
+
+public class Ship extends Entity implements Drawable {
 
     private Position position;
     private Engine engine;
@@ -16,7 +21,7 @@ public class Ship extends Drawable {
 
     /* ========== PUBLIC ========== */
     public Ship(Position position, Engine engine, Mesh mesh, double size) {
-        super(Ship.class, "");
+        super(Ship.class);
 
         this.position = position;
         this.engine = engine;

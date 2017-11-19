@@ -8,44 +8,45 @@ import engine.calculators.PhysicsCalculator;
 
 public class OrbitTask extends Task {
 
-	private CelestialBody celestialBody;
-	private double inclination;
-	private double orbitRadius;
-	private double position;
+    private CelestialBody celestialBody;
+    private double inclination;
+    private double orbitRadius;
+    private double position;
 
-	/* ========== PUBLIC ========== */
-	public OrbitTask(CelestialBody celestialBody, double orbitRadius,
-			double inclination, double position) {
-		this.celestialBody = celestialBody;
-		this.inclination = inclination;
-		this.orbitRadius = orbitRadius;
-		this.position = position;
-	}
+    /* ========== PUBLIC ========== */
+    public OrbitTask(CelestialBody celestialBody, double orbitRadius, double inclination, double position) {
+        System.out.println("Lecê orbitowac " + celestialBody.getName());
 
-	@Override
-	public boolean execute(Ship ship) {
+        this.celestialBody = celestialBody;
+        this.inclination = inclination;
+        this.orbitRadius = orbitRadius;
+        this.position = position;
+    }
 
-		Coords orbittingBodyCoords = celestialBody.getOrbit().getCoords();
-		Coords coords = ship.getPosition().getCoords();
+    @Override
+    public boolean execute(Ship ship) {
 
-		// Duplikacja
-		if (CoordsCalculator.equals(coords, orbittingBodyCoords, orbitRadius)) {
-			position += PhysicsCalculator.angularVelocity(orbitRadius, ship
-					.getEngine().getVelocity());
+        Coords orbittingBodyCoords = celestialBody.getOrbit().getCoords();
+        Coords coords = ship.getPosition().getCoords();
 
-			CoordsCalculator.calculateOrbitalPosition(celestialBody.getOrbit(),
-					celestialBody.getSphere());
-			CoordsCalculator.translateBy(ship.getPosition(),
-					celestialBody.getOrbit());
+        // Duplikacja
+        if (CoordsCalculator.equals(coords, orbittingBodyCoords, orbitRadius)) {
+            position += PhysicsCalculator.angularVelocity(orbitRadius, ship.getEngine().getVelocity());
 
-			return true;
-		}
+            CoordsCalculator.calculateOrbitalPosition(celestialBody.getOrbit(), celestialBody.getSphere());
+            CoordsCalculator.translateBy(ship.getPosition(), celestialBody.getOrbit());
 
-		boolean rotationChange = rotationChange(ship, orbittingBodyCoords);
-		// ship.getControl().setTurbo(rotationChange);
-		accelerationChange(ship, orbittingBodyCoords, orbitRadius);
+            return true;
+        }
 
-		return false;
+        System.out.println("Lecê orbitowac " + celestialBody.getName() + " " + celestialBody.getOrbit().getCoords()
+                + ", jestem " + ship.getPosition().getCoords());
 
-	}
+        boolean rotationChange = rotationChange(ship, orbittingBodyCoords);
+        // ship.getControl().setTurbo(rotationChange);
+        accelerationChange(ship, orbittingBodyCoords, orbitRadius);
+
+        return false;
+
+    }
 }
