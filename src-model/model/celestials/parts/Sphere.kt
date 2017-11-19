@@ -1,16 +1,14 @@
 package model.celestials.parts
 
-import model.celestials.CelestialBody
-import model.type.DrawableResolution
-
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.jogamp.opengl.util.texture.Texture
-
 import engine.calculators.PhysicsCalculator
 import engine.components.drawers.DrawableSphere
 import engine.utils.TextureLoader
+import model.celestials.CelestialBody
 import model.interfaces.Drawable
+import model.type.DrawableResolution
 import javax.media.opengl.GL2
 
 /**
@@ -31,17 +29,18 @@ constructor(
     var rotation: Double = 0.toDouble()
 
     @JsonIgnore
-    var texture: Texture? = null
-    @JsonIgnore
     var angularVelocity: Double = PhysicsCalculator.angularVelocity(radius, velocity)
     @JsonIgnore
     var resolution: DrawableResolution = DrawableResolution.VERY_FAR
 
+    @JsonIgnore
+    var drawable: DrawableSphere? = null
+
     override fun draw(gl: GL2?) {
-        if (this.texture == null) {
-            val texture = TextureLoader.getTexture(gl, textureFile)
-            this.texture = texture
+        if (this.drawable == null) {
+            this.drawable = DrawableSphere(this, TextureLoader.getTexture(gl, textureFile))
         }
-        DrawableSphere(this, texture).draw(gl)
+
+        this.drawable?.draw(gl)
     }
 }

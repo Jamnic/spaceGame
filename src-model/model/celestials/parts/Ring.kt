@@ -21,16 +21,16 @@ constructor(
         var outerRadius: Double
 ) : Drawable {
     @JsonIgnore
-    var texture: Texture? = null
-    @JsonIgnore
     var resolution: DrawableResolution = DrawableResolution.VERY_FAR
 
-    override fun draw(gl: GL2?) {
-        if (this.texture == null) {
-            val texture = TextureLoader.getTexture(gl, textureFile)
-            this.texture = texture
+    @JsonIgnore
+    var drawable : DrawableRing? = null
+
+    override fun draw(gl: GL2) {
+        if (this.drawable == null) {
+            this.drawable = DrawableRing(this, TextureLoader.getTexture(gl, textureFile))
         }
 
-        DrawableRing(this, texture).draw(gl)
+        this.drawable?.draw(gl)
     }
 }

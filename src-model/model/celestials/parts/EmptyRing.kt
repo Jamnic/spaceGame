@@ -7,7 +7,8 @@ class EmptyRing
 @JsonCreator
 constructor(
 ) : Ring("", 0.0, 0.0) {
-    override fun draw(gl: GL2?) {
+
+    override fun draw(gl: GL2) {
         // do nothing
     }
 }

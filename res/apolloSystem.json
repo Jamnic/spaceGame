@@ -1,7 +1,7 @@
 {
   "id" : 1,
   "skyBox" : {
-    "skyBox" : {
+    "sphere" : {
       "rotation" : 0.0,
       "textureFile" : "BlueGalaxy",
       "radius" : 110.0,

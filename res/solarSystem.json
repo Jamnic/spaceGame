@@ -1,7 +1,7 @@
 {
   "id" : 0,
   "skyBox" : {
-    "skyBox" : {
+    "sphere" : {
       "rotation" : 0.0,
       "textureFile" : "solarSystem",
       "radius" : 110.0,

@@ -17,16 +17,16 @@ open class Clouds(
         var radius: Double
 ) : Drawable {
     @JsonIgnore
-    var texture: Texture? = null
-    @JsonIgnore
     var resolution: DrawableResolution = DrawableResolution.VERY_FAR
 
+    @JsonIgnore
+    var drawable : DrawableClouds? = null
+
     override fun draw(gl: GL2) {
-        if (this.texture == null) {
-            val texture = TextureLoader.getTexture(gl, textureFile)
-            this.texture = texture
+        if (this.drawable == null) {
+            this.drawable = DrawableClouds(this, TextureLoader.getTexture(gl, textureFile))
         }
 
-        DrawableClouds(this, texture).draw(gl)
+        this.drawable?.draw(gl)
     }
 }
