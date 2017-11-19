@@ -10,4 +10,4 @@ class Wormhole(
         sphere: Sphere,
         var systemFromId: Long,
         var systemToId: Long
-) : CelestialBody(name, orbit, sphere, CelestialBodyType.WORMHOLE)
+) : CelestialBody(CelestialBodyType.WORMHOLE, name, orbit, sphere)

@@ -8,7 +8,7 @@ import javax.media.opengl.glu.GLUquadric;
 
 import static engine.graphics.holders.GLUHolder.GLU;
 
-class DrawableRing {
+public class DrawableRing {
 
     private final Ring ring;
     private final Texture texture;

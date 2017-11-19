@@ -12,7 +12,7 @@ import engine.graphics.holders.GLUHolder;
  * 
  * @param <T> type of drawed {@link Drawable} entity.
  */
-public abstract class Drawer<T extends Drawable> extends GameComponentContainer {
+public abstract class Drawer<T> extends GameComponentContainer {
 
     /* ========== PUBLIC ========== */
     /**

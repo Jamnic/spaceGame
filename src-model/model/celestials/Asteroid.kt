@@ -7,4 +7,4 @@ class Asteroid(
         name: String,
         orbit: Orbit,
         sphere: Sphere
-) : CelestialBody(name, orbit, sphere, CelestialBodyType.ASTEROID)
+) : CelestialBody(CelestialBodyType.ASTEROID, name, orbit, sphere)

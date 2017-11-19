@@ -6,9 +6,7 @@ import engine.utils.TextureLoader;
 import game.architecture.Drawer;
 import model.celestials.CelestialBody;
 import model.celestials.CelestialBodyType;
-import model.celestials.parts.Clouds;
-import model.celestials.parts.Ring;
-import model.celestials.parts.Sphere;
+import model.celestials.parts.*;
 import model.type.DrawableResolution;
 
 import javax.media.opengl.GL2;
@@ -34,17 +32,15 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
                 LightLoader.planetaryLight(gl);
 
             translateWithCoords(gl, celestialBody.getOrbit().getCoords());
-            drawSphere(gl, sphere);
+            drawSphere(gl, celestialBody);
         }
 
     }
 
     /* ========== PRIVATE ========== */
-    private void drawSphere(GL2 gl, Sphere sphere) {
+    private void drawSphere(GL2 gl, CelestialBody celestialBody) {
 
-        Texture texture = sphere.getTexture();
-        if (texture == null)
-            sphere.setTexture(texture = TextureLoader.getTexture(gl, sphere.getTextureFile()));
+        Sphere sphere = celestialBody.getSphere();
 
         gl.glPushMatrix();
 
@@ -52,17 +48,9 @@ public final class CelestialBodyDrawer extends Drawer<CelestialBody> {
         gl.glRotated(sphere.getInclination(), 1, 0, 0);
         gl.glRotated(sphere.getRotation(), 0, 0, 1);
 
-        new DrawableSphere(sphere, texture).draw(gl);
-
-        Clouds clouds = sphere.getClouds();
-        if (clouds != null) {
-            cloudsDrawer.draw(gl, clouds);
-        }
-
-        Ring ring = sphere.getRing();
-        if (ring != null) {
-            ringDrawer.draw(gl, ring);
-        }
+        celestialBody.getSphere().draw(gl);
+        celestialBody.getClouds().draw(gl);
+        celestialBody.getRing().draw(gl);
 
         gl.glPopMatrix();
     }

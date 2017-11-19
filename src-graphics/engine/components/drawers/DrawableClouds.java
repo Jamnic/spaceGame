@@ -8,7 +8,7 @@ import javax.media.opengl.glu.GLUquadric;
 
 import static engine.graphics.holders.GLUHolder.GLU;
 
-class DrawableClouds {
+public class DrawableClouds {
 
     private final Clouds clouds;
     private final Texture texture;

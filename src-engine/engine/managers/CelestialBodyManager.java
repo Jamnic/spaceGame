@@ -82,7 +82,7 @@ public class CelestialBodyManager extends Manager<CelestialBody> {
 
         // Distance
         double distance = CoordsCalculator.distance(bodyCoords, shipCoords);
-        setResolution(sphere, distance);
+        setResolution(body, distance);
 
         // Collisions
         checkCollisions(body, distance);
@@ -91,17 +91,17 @@ public class CelestialBodyManager extends Manager<CelestialBody> {
         CoordsCalculator.gravityAttraction(shipCoords, bodyCoords, sphere);
     }
 
-    private void setResolution(Sphere sphere, double distance) {
+    private void setResolution(CelestialBody body, double distance) {
 
-        DrawableResolution resolution = DrawableResolution.determineResolution(sphere.getRadius(), distance);
-        sphere.setResolution(resolution);
+        DrawableResolution resolution = DrawableResolution.determineResolution(body.getSphere().getRadius(), distance);
+        body.getSphere().setResolution(resolution);
 
-        Clouds clouds = sphere.getClouds();
+        Clouds clouds = body.getClouds();
         if (clouds != null) {
             clouds.setResolution(resolution);
         }
 
-        Ring ring = sphere.getRing();
+        Ring ring = body.getRing();
         if (ring != null) {
             ring.setResolution(resolution);
         }

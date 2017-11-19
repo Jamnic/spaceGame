@@ -7,4 +7,4 @@ class Star(
         name: String,
         orbit: Orbit,
         sphere: Sphere
-) : CelestialBody(name, orbit, sphere, CelestialBodyType.STAR)
+) : CelestialBody(CelestialBodyType.STAR, name, orbit, sphere)

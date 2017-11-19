@@ -10,8 +10,6 @@ import repositories.StarSystemRepository;
 import com.jogamp.opengl.util.gl2.GLUT;
 
 import engine.components.drawers.CelestialBodyDrawer;
-import engine.components.drawers.CloudsDrawer;
-import engine.components.drawers.RingDrawer;
 import engine.components.drawers.ShipDrawer;
 import engine.components.drawers.SkyBoxDrawer;
 import engine.graphics.holders.GLUHolder;
@@ -30,8 +28,6 @@ public abstract class GameComponentContainer {
     protected static TaskManager taskManager = new TaskManager();
 
     protected static CelestialBodyDrawer celestialBodyDrawer = new CelestialBodyDrawer();
-    protected static CloudsDrawer cloudsDrawer = new CloudsDrawer();
-    protected static RingDrawer ringDrawer = new RingDrawer();
     protected static ShipDrawer shipDrawer = new ShipDrawer();
 
     protected static SkyBoxDrawer skyBoxDrawer = new SkyBoxDrawer();

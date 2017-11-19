@@ -1,12 +1,8 @@
 package model.celestials
 
-import model.celestials.parts.Orbit
-import model.celestials.parts.Sphere
-import model.interfaces.Drawable
-
 import com.fasterxml.jackson.annotation.JsonCreator
-
 import game.architecture.Entity
+import model.celestials.parts.*
 
 /**
  * Entity containing all information about given celestial body.
@@ -16,8 +12,10 @@ import game.architecture.Entity
 open class CelestialBody
 @JsonCreator
 constructor(
-        var name: String?,
-        var orbit: Orbit?,
-        var sphere: Sphere?,
-        var type: CelestialBodyType?
-) : Entity(CelestialBody::class.java), Drawable
+        var type: CelestialBodyType,
+        var name: String,
+        var orbit: Orbit,
+        var sphere: Sphere,
+        var clouds: Clouds = EmptyClouds(),
+        var ring: Ring = EmptyRing()
+) : Entity(CelestialBody::class.java)

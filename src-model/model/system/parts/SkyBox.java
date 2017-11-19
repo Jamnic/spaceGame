@@ -1,7 +1,6 @@
 package model.system.parts;
 
 import model.celestials.parts.Sphere;
-import model.interfaces.Drawable;
 import model.system.StarSystem;
 import model.type.DrawableResolution;
 
@@ -13,10 +12,10 @@ import model.type.DrawableResolution;
  * <li>Containing the Sky Box data.</li>
  * <li>Enables to draw Sky Box.
  * </ul>
- * 
+ *
  * @author Jamnic
  */
-public class SkyBox implements Drawable {
+public class SkyBox {
 
     private static final DrawableResolution SKY_BOX_RESOLUTION = DrawableResolution.MEDIUM;
 

@@ -10,7 +10,7 @@ import model.ship.parts.Engine;
 import model.ship.parts.Position;
 import model.type.DrawableResolution;
 
-public class Ship extends Entity implements Drawable {
+public class Ship extends Entity {
 
     private Position position;
     private Engine engine;
