@@ -11,10 +11,10 @@ import model.celestials.parts.Clouds;
 import model.celestials.parts.Orbit;
 import model.celestials.parts.Ring;
 import model.celestials.parts.Sphere;
-import model.ship.PlayerShip;
 import engine.calculators.CoordsCalculator;
 import engine.calculators.DegreeCalculator;
 import game.architecture.Manager;
+import model.ship.PlayerShip;
 import model.type.DrawableResolution;
 
 /**

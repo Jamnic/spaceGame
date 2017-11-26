@@ -1,11 +1,9 @@
 package model.system.parts
 
 import engine.components.drawers.DrawableSkyBox
-import engine.components.drawers.DrawableSphere
 import engine.utils.TextureLoader
 import model.celestials.parts.Sphere
 import model.interfaces.Drawable
-import model.system.StarSystem
 import model.type.DrawableResolution
 
 import javax.media.opengl.GL2

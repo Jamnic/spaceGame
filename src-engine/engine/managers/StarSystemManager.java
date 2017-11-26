@@ -6,8 +6,8 @@ import javax.media.opengl.GL2;
 
 import model.celestials.Wormhole;
 import model.ship.PlayerShip;
-import model.system.StarSystem;
 import game.architecture.Manager;
+import model.system.StarSystem;
 
 /**
  * Manages the {@link StarSystem}.

@@ -3,12 +3,11 @@ package engine.utils;
 import java.io.File;
 import java.io.IOException;
 
-import model.system.StarSystem;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import model.system.StarSystem;
 
 /**
  * Parses input into JSON format.

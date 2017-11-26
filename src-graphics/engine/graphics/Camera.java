@@ -6,6 +6,9 @@ import javax.media.opengl.glu.GLU;
 import engine.graphics.holders.GLUHolder;
 import game.GameRunner;
 
+import static engine.graphics.window.GameWindow.FRAME_HEIGHT;
+import static engine.graphics.window.GameWindow.FRAME_WIDTH;
+
 public class Camera {
 
     private static final GLU glu = GLUHolder.GLU;
@@ -15,7 +18,7 @@ public class Camera {
         gl.glMatrixMode(GL2.GL_PROJECTION);
         gl.glLoadIdentity();
 
-        glu.gluPerspective(perspective, (double) GameRunner.FRAME_WIDTH / (double) GameRunner.FRAME_HEIGHT, 0.1, Z_FAR);
+        glu.gluPerspective(perspective, (double) FRAME_WIDTH / (double) FRAME_HEIGHT, 0.1, Z_FAR);
         glu.gluLookAt(-0.1, 0, 0, 0, 0, 0, 0, 1, 0);
 
         gl.glMatrixMode(GL2.GL_MODELVIEW);

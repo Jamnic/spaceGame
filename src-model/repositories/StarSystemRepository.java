@@ -1,8 +1,8 @@
 package repositories;
 
 import model.celestials.CelestialBody;
-import model.system.StarSystem;
 import game.architecture.Repository;
+import model.system.StarSystem;
 
 /**
  * Repository for {@link CelestialBody} entities.

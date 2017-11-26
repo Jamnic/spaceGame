@@ -1,24 +1,26 @@
 package engine.graphics;
 
-import java.awt.Dimension;
-
-import javax.media.opengl.GL2;
-import javax.media.opengl.GLAutoDrawable;
-import javax.media.opengl.GLCapabilities;
-import javax.media.opengl.GLEventListener;
-import javax.media.opengl.awt.GLJPanel;
-
-import model.ship.PlayerShip;
 import engine.graphics.listeners.MainKeyListener;
 import engine.graphics.listeners.MainMouseListener;
 import engine.thread.GameTickThread;
 import engine.utils.LightLoader;
 import engine.utils.TextLogger;
 import game.GameLoader;
-import game.GameRunner;
 import game.architecture.GameComponentContainer;
+import model.Coords;
+import model.ship.PlayerShip;
 import model.ship.parts.Engine;
 import model.ship.parts.Position;
+
+import javax.media.opengl.GL2;
+import javax.media.opengl.GLAutoDrawable;
+import javax.media.opengl.GLCapabilities;
+import javax.media.opengl.GLEventListener;
+import javax.media.opengl.awt.GLJPanel;
+import java.awt.*;
+
+import static engine.graphics.window.GameWindow.FRAME_HEIGHT;
+import static engine.graphics.window.GameWindow.FRAME_WIDTH;
 
 /**
  * Class that should be used to render scene.
@@ -26,11 +28,13 @@ import model.ship.parts.Position;
 public final class GraphicsPane extends GLJPanel implements GLEventListener {
 
     /* ========== PUBLIC ========== */
-    public GraphicsPane(GLCapabilities capabilities, PlayerShip ship, Dimension dimension) {
+    public GraphicsPane(GLCapabilities capabilities) {
         super(capabilities);
 
-        setPreferredSize(dimension);
+        setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         addGLEventListener(this);
+
+        PlayerShip ship = new PlayerShip(new Coords(10, 0, 0));
 
         addKeyListener(new MainKeyListener(ship));
         addMouseMotionListener(new MainMouseListener(ship));
@@ -160,13 +164,13 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
         Position position = ship.getPosition();
         Engine engine = ship.getEngine();
 
-        textDrawer.text2D("FPS: " + fpsCounter.fps(), 0, GameRunner.FRAME_HEIGHT - 10);
-        textDrawer.text2D("Velocity: " + TextLogger.twoDecimal(engine.getVelocity() * 100), 0, GameRunner.FRAME_HEIGHT - 20);
+        textDrawer.text2D("FPS: " + fpsCounter.fps(), 0, FRAME_HEIGHT - 10);
+        textDrawer.text2D("Velocity: " + TextLogger.twoDecimal(engine.getVelocity() * 100), 0, FRAME_HEIGHT - 20);
         textDrawer
-                .text2D("Acceleration: " + TextLogger.twoDecimal(engine.getAcceleration() * 100), 0, GameRunner.FRAME_HEIGHT - 30);
+                .text2D("Acceleration: " + TextLogger.twoDecimal(engine.getAcceleration() * 100), 0, FRAME_HEIGHT - 30);
         textDrawer.text2D(
                 "X: " + TextLogger.twoDecimal(position.getCoords().getX()) + ", Y: " + TextLogger.twoDecimal(position.getCoords().getY())
-                        + ", Z: " + TextLogger.twoDecimal(position.getCoords().getZ()), 0, GameRunner.FRAME_HEIGHT - 40);
+                        + ", Z: " + TextLogger.twoDecimal(position.getCoords().getZ()), 0, FRAME_HEIGHT - 40);
     }
 
     private void perspectiveCooldown() {

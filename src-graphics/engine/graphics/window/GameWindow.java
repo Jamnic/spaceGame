@@ -1,54 +1,46 @@
 package engine.graphics.window;
 
-import java.awt.Container;
+import engine.graphics.GraphicsPane;
+import model.Coords;
+import model.ship.PlayerShip;
 
-import javax.swing.JFrame;
+import java.awt.*;
 
-/**
- * Component class used to render the game window and to capture mouse motion.<br>
- * <br>
- * <b>Class responsibilites</b>
- * <ul>
- * <li>Capturing mouse motion.</li>
- * <li>Preparing the parameters of the game window.</li>
- * </ul>
- * 
- * @author Jamnic
- */
+import javax.media.opengl.GLCapabilities;
+import javax.swing.*;
+
 public class GameWindow extends JFrame {
 
-	private static final boolean IS_RESIZEABLE = false;
-	private static final boolean IS_VISIBLE = true;
-	private static final int X_LOCATION = 50;
-	private static final int Y_LOCATION = 50;
+    public static final int FRAME_WIDTH = 1200;
+    public static final int FRAME_HEIGHT = 700;
 
-	/* ========== PUBLIC ========== */
-	/**
-	 * Instantinates the {@link GameWindow} class with given parameters and sets constant values.
-	 * 
-	 * @param windowTitle - title of the game window.
-	 * @param graphicsPane - {@link Container} where graphics are drawn. {@link GameWindow} must have it to display in
-	 * window.
-	 */
-	public GameWindow(String windowTitle, Container graphicsPane) {
-		super(windowTitle);
+    private static final boolean IS_RESIZEABLE = false;
+    private static final boolean IS_VISIBLE = true;
+    private static final int X_LOCATION = 50;
+    private static final int Y_LOCATION = 50;
+    private static final String TITLE = "Space game";
 
-		setContentPane(graphicsPane);
+    public GameWindow() {
+        super(TITLE);
+        setContentPane(createGraphicsPaneComponent());
+        setWindowParameters();
+        pack();
+    }
 
-		setWindowParameters();
-		pack();
-	}
+    private GraphicsPane createGraphicsPaneComponent() {
+        GLCapabilities capabilities = new GLCapabilities(null);
+        capabilities.setDoubleBuffered(true);
 
-	/* ========== PRIVATE ========== */
-	private static final long serialVersionUID = 9102033512048383786L;
+        GraphicsPane graphicsPane = new GraphicsPane(capabilities);
+        graphicsPane.requestFocusInWindow();
 
-	/**
-	 * Method sets the window parameters with constant field values.
-	 */
-	private void setWindowParameters() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(X_LOCATION, Y_LOCATION);
-		setResizable(IS_RESIZEABLE);
-		setVisible(IS_VISIBLE);
-	}
+        return graphicsPane;
+    }
+
+    private void setWindowParameters() {
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocation(X_LOCATION, Y_LOCATION);
+        setResizable(IS_RESIZEABLE);
+        setVisible(IS_VISIBLE);
+    }
 }

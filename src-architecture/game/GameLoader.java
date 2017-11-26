@@ -9,12 +9,12 @@ import javax.media.opengl.GL2;
 
 import model.ship.Mesh;
 import model.ship.PlayerShip;
-import model.system.StarSystem;
 import engine.thread.Tickable;
 import engine.utils.MeshLoader;
 import game.architecture.GameComponentContainer;
 import game.creator.ApolloSystemCreator;
 import game.creator.SolarSystemCreator;
+import model.system.StarSystem;
 
 public class GameLoader extends GameComponentContainer implements Tickable {
 

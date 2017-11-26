@@ -1,9 +1,9 @@
 package engine.graphics.listeners;
 
+import model.ship.PlayerShip;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
-
-import model.ship.PlayerShip;
 
 public class MainMouseListener extends AbstractMainListener implements MouseMotionListener {
 

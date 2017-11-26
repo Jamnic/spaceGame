@@ -1,17 +1,16 @@
 package model.ship;
 
-import engine.graphics.GraphicsPane;
 import game.GameRunner;
+import model.Coords;
+import model.ship.parts.Control;
+import model.ship.parts.Engine;
+import model.ship.parts.Position;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-import model.Coords;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import model.ship.parts.Control;
-import model.ship.parts.Engine;
-import model.ship.parts.Position;
+import static engine.graphics.window.GameWindow.FRAME_HEIGHT;
+import static engine.graphics.window.GameWindow.FRAME_WIDTH;
 
 public class PlayerShip extends Ship {
 
@@ -21,8 +20,8 @@ public class PlayerShip extends Ship {
     }
 
     public void mouseMoved(MouseEvent e) {
-        double rotationXChange = (double) e.getX() / (double) GameRunner.FRAME_WIDTH - 0.5;
-        double rotationYChange = (double) e.getY() / (double) GameRunner.FRAME_HEIGHT - 0.5;
+        double rotationXChange = (double) e.getX() / (double) FRAME_WIDTH - 0.5;
+        double rotationYChange = (double) e.getY() / (double) FRAME_HEIGHT - 0.5;
 
         Engine engine = getEngine();
 
@@ -58,13 +57,5 @@ public class PlayerShip extends Ship {
             control.setTurbo(false);
             control.setAccelerating(false);
         }
-    }
-
-    /* ========== PRIVATE ========== */
-    @JsonIgnore
-    private GraphicsPane pane;
-
-    public void setPane(GraphicsPane graphicsPane) {
-        this.pane = graphicsPane;
     }
 }
