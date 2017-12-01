@@ -52,20 +52,20 @@ public final class VelocityCalculator {
     private VelocityCalculator() {
     }
 
-    private static void calcVelocity(Engine engine, double maxVelocity) {
+    private static void calcVelocity(Engine engine, float maxVelocity) {
 
-        double velocity = engine.getVelocity();
-        double acceleration = engine.getAcceleration();
+        float velocity = engine.getVelocity();
+        float acceleration = engine.getAcceleration();
 
         velocity += acceleration;
 
         engine.setVelocity(normalize(velocity, maxVelocity));
     }
 
-    private static void calcAcceleration(Control control, Engine engine, double maxAcceleration,
+    private static void calcAcceleration(Control control, Engine engine, float maxAcceleration,
             double accelerationChange) {
 
-        double acceleration = engine.getAcceleration();
+        float acceleration = engine.getAcceleration();
 
         if (control.isAccelerating()) {
             engine.setAcceleration(normalize(acceleration += accelerationChange, maxAcceleration));
@@ -74,7 +74,7 @@ public final class VelocityCalculator {
         }
     }
 
-    private static double normalize(double value, double maxValue) {
+    private static float normalize(float value, float maxValue) {
 
         if (value > maxValue) {
             value = maxValue;

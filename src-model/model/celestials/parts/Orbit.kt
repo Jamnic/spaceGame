@@ -3,6 +3,8 @@ package model.celestials.parts
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonIgnore
 import engine.calculators.PhysicsCalculator
+import engine.math.Degree
+import engine.math.Radius
 import model.Coords
 import model.celestials.CelestialBody
 
@@ -17,12 +19,12 @@ class Orbit
 @JsonCreator
 constructor(
         var orbitting: CelestialBody?,
-        var radius: Double,
-        velocity: Double,
-        var position: Double
+        var radius: Radius,
+        velocity: Float,
+        var position: Degree
 ) {
     @JsonIgnore
     var coords: Coords = Coords(0.0, 0.0, 0.0)
     @JsonIgnore
-    var angularVelocity: Double = PhysicsCalculator.angularVelocity(radius, velocity)
+    var angularVelocity: Float = PhysicsCalculator.angularVelocity(radius.value(), velocity)
 }

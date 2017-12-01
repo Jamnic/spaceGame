@@ -1,25 +1,36 @@
 package model.celestials
 
 import com.fasterxml.jackson.annotation.JsonCreator
-import game.architecture.Entity
+import model.StarSystemObject
 import model.celestials.parts.*
 import model.type.DrawableResolution
+import javax.media.opengl.GL2
 
-/**
- * Entity containing all information about given celestial body.
- *
- * TODO distances between bodies and ships mapping.
- */
 open class CelestialBody
 @JsonCreator
 constructor(
-        var name: String,
-        var orbit: Orbit,
-        var sphere: Sphere,
-        var clouds: Clouds = EmptyClouds(),
-        var ring: Ring = EmptyRing()
-) : Entity(CelestialBody::class.java) {
+        val name: String,
+        val orbit: Orbit,
+        private val sphere: Sphere,
+        private val clouds: Clouds = EmptyClouds(),
+        private val ring: Ring = EmptyRing()
+) : StarSystemObject<CelestialBody>(CelestialBody::class.java, orbit.coords) {
 
     open fun glows() = false
     fun visible() = sphere.resolution != DrawableResolution.INVISIBLE
+    fun updateResolution(resolution: DrawableResolution) {
+        sphere.resolution = resolution
+        clouds.resolution = resolution
+        ring.resolution = resolution
+    }
+
+    fun draw(gl: GL2) {
+        sphere.draw(gl)
+        clouds.draw(gl)
+        ring.draw(gl)
+    }
+
+    fun sphere(): Sphere {
+        return sphere
+    }
 }

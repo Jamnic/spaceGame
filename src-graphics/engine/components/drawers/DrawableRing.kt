@@ -2,6 +2,7 @@ package engine.components.drawers
 
 import com.jogamp.opengl.util.texture.Texture
 import engine.graphics.holders.GLUHolder.GLU
+import engine.math.Unit
 import model.celestials.parts.Ring
 import javax.media.opengl.GL2
 
@@ -17,10 +18,10 @@ class DrawableRing(
     override fun drawElement(gl: GL2) {
         GLU.gluCylinder(
                 this.quadric,
-                ring.innerRadius,
-                ring.outerRadius,
+                ring.innerRadius.value(Unit.THOUSAND_KM).toDouble(),
+                ring.outerRadius.value(Unit.THOUSAND_KM).toDouble(),
                 RING_THICKNESS.toDouble(),
-                ring.resolution.resolution,
+                ring.resolution.resolution(),
                 1)
     }
 }

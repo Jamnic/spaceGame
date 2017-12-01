@@ -4,9 +4,9 @@ import com.jogamp.opengl.util.texture.Texture
 import model.celestials.parts.Sphere
 
 import javax.media.opengl.GL2
-import javax.media.opengl.glu.GLUquadric
 
 import engine.graphics.holders.GLUHolder.GLU
+import engine.math.Unit
 
 class DrawableSphere(
         private val sphere: Sphere,
@@ -16,8 +16,8 @@ class DrawableSphere(
     override fun drawElement(gl: GL2) {
         GLU.gluSphere(
                 this.quadric,
-                sphere.radius,
-                sphere.resolution.resolution,
-                sphere.resolution.resolution)
+                sphere.radius.value(Unit.THOUSAND_KM).toDouble(),
+                sphere.resolution.resolution(),
+                sphere.resolution.resolution())
     }
 }

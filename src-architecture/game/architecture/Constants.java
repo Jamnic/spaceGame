@@ -9,29 +9,27 @@ import model.Coords;
 public interface Constants {
 
     // System creation constants
-    double SCALE = 0.01;
-    double AU_PARAMETER = 1500000 * SCALE;
+    float SCALE = 0.01f;
 
-    double ROTATION_PARAMETER = 0.0001 * SCALE; // change to angular rotationVelocity
-    double ORBITTING_PARAMETER = 0.01 * SCALE;
+    float ROTATION_PARAMETER = 1f * SCALE; // change to angular rotationVelocity
+    double ORBITTING_PARAMETER = 0.001 * SCALE;
     double MOON_VARIABLE = 50000 * SCALE;
-    double RADIUS_PARAMETER = 1 * SCALE;
 
-    double INNER_RING_RADIUS = 20000 * RADIUS_PARAMETER;
-    double OUTER_RING_RADIUS = 80000 * RADIUS_PARAMETER;
-    double CLOUDS_RADIUS = 100 * RADIUS_PARAMETER;
+    float INNER_RING_RADIUS = 20000;
+    float OUTER_RING_RADIUS = 80000;
+    float CLOUDS_RADIUS = 100;
 
     // Velocity constants
-    double TURBO_MAX_VELOCITY = 20000 * SCALE;
-    double TURBO_ACCELERATION_CHANGE = 10 * SCALE;
-    double MAX_ACCELERATION = 10 * SCALE;
-    double MAX_TURBO_ACCELERATION = 100 * SCALE;
+    float TURBO_MAX_VELOCITY = 2000 * SCALE;
+    double TURBO_ACCELERATION_CHANGE = 1 * SCALE;
+    float MAX_ACCELERATION = 1 * SCALE;
+    float MAX_TURBO_ACCELERATION = 10 * SCALE;
     double ACCELERATION_CHANGE = 1 * SCALE;
-    double MAX_VELOCITY = 10 * SCALE;
+    float MAX_VELOCITY = 1 * SCALE;
     double ACCELERATION_DECREASE = 1 * SCALE;
 
     // Ship resolution
-    int SHIP_SIZE_MAGNIFIER = 1000;
+    double SHIP_SIZE_MAGNIFIER = 0.1;
 
     // Math constants
     int POWER_TWO = 2;
@@ -40,12 +38,12 @@ public interface Constants {
 
     // Circle constants
     int QUARTER_CIRCLE = 90;
-    double FULL_CIRCLE = 360;
+    float FULL_CIRCLE = 360;
     double HALF_CIRCLE = 180;
 
     // Physics
     double GRAVITY_CONSTANT = 0.00001;
-    double TWO_PI = Math.PI * 2.0;
+    float TWO_PI = (float) Math.PI * 2.0f;
     double VOLUME_PARAMETER = 1.33333333;
     
     // Time constants

@@ -1,22 +1,18 @@
 package engine.components.drawers;
 
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
-
-import javax.media.opengl.GL;
-import javax.media.opengl.GL2;
-
-import model.ship.Mesh;
-import model.ship.Ship;
-
 import com.jogamp.common.nio.Buffers;
 import com.jogamp.opengl.util.texture.Texture;
-
 import engine.utils.LightLoader;
 import engine.utils.TextureLoader;
 import game.architecture.Drawer;
+import model.ship.Mesh;
+import model.ship.Ship;
 import model.ship.parts.Position;
-import model.type.DrawableResolution;
+
+import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 
 /**
  * Component responsible for drawing {@link Ship}.
@@ -42,8 +38,8 @@ public final class ShipDrawer extends Drawer<Ship> {
 
                 gl.glRotated(-90, 0, 1, 0); // TODO obr�t modelu
 
-                gl.glRotated(position.getRotationX(), 0, 1, 0);
-                gl.glRotated(position.getRotationY(), 1, 0, 0);
+                gl.glRotated(position.getRotationX().value(), 0, 1, 0);
+                gl.glRotated(position.getRotationY().value(), 1, 0, 0);
 
                 double size = ship.getSize();
                 gl.glScaled(size, size, size);

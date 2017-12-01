@@ -1,20 +1,19 @@
 package game;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-import javax.media.opengl.GL2;
-
-import model.ship.Mesh;
-import model.ship.PlayerShip;
 import engine.thread.Tickable;
 import engine.utils.MeshLoader;
 import game.architecture.GameComponentContainer;
 import game.creator.ApolloSystemCreator;
 import game.creator.SolarSystemCreator;
+import model.ship.Mesh;
+import model.ship.PlayerShip;
 import model.system.StarSystem;
+
+import javax.media.opengl.GL2;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GameLoader extends GameComponentContainer implements Tickable {
 
@@ -23,15 +22,15 @@ public class GameLoader extends GameComponentContainer implements Tickable {
 
     @Override
     public void tick() {
-        GameComponentContainer.starSystemManager.tick(starSystems, playerShip);
+        GameComponentContainer.starSystemManager.tick(playerShip);
     }
 
-    public void loadSystem(GL2 gl, PlayerShip playerShip) {
+    public void loadSystem(PlayerShip playerShip) {
 
         System.out.println("Initializing...");
-        starSystems = new LinkedList<StarSystem>();
+        starSystems = new LinkedList<>();
         StarSystem solarSystem = null;
-        StarSystem apolloSystem = null;
+        StarSystem apolloSystem;
 
         List<Mesh> meshes = new ArrayList<Mesh>();
 
@@ -47,7 +46,7 @@ public class GameLoader extends GameComponentContainer implements Tickable {
 
         try {
             System.out.println("Loading Solar system...");
-            solarSystem = SolarSystemCreator.create(gl);
+            solarSystem = new SolarSystemCreator().create();
             solarSystem.setVisible(true);
 
             starSystems.add(solarSystem);
@@ -55,7 +54,7 @@ public class GameLoader extends GameComponentContainer implements Tickable {
             starSystemRepository.add(solarSystem);
 
             System.out.println("Loading Apollo system...");
-            apolloSystem = ApolloSystemCreator.create(gl);
+            apolloSystem = new ApolloSystemCreator().create();
             apolloSystem.setVisible(false);
 
             starSystems.add(apolloSystem);
@@ -66,20 +65,17 @@ public class GameLoader extends GameComponentContainer implements Tickable {
         }
 
         this.playerShip = playerShip;
+        this.playerShip.setStarSystem(solarSystem);
 
         System.out.println("Done!");
     }
 
-    public void drawCurrentSkyBox(GL2 gl) {
-        for (StarSystem starSystem : starSystems) {
-            if (starSystem.isVisible()) {
-                starSystem.getSkyBox().draw(gl);
-                return;
-            }
-        }
+    public void drawCurrentSkyBox(GL2 gl, PlayerShip playerShip) {
+        StarSystem system = playerShip.getStarSystem();
+        system.getSkyBox().draw(gl);
     }
 
-    public void drawObjects(GL2 gl) {
-        GameComponentContainer.starSystemManager.draw(gl, starSystems);
+    public void drawObjects(GL2 gl, PlayerShip playerShip) {
+        GameComponentContainer.starSystemManager.draw(gl, playerShip);
     }
 }

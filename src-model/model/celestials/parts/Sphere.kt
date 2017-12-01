@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonIgnore
 import engine.calculators.PhysicsCalculator
 import engine.components.drawers.DrawableSphere
+import engine.math.Radius
 import engine.utils.TextureLoader
 import model.celestials.CelestialBody
 import model.interfaces.Drawable
@@ -21,14 +22,14 @@ class Sphere
 @JsonCreator
 constructor(
         var textureFile: String?,
-        var radius: Double,
-        rotationVelocity: Double,
+        var radius: Radius,
+        rotationVelocity: Float,
         var inclination: Double
 ) : Drawable {
-    var rotation: Double = 0.toDouble()
+    var rotation: Float = 0f
 
     @JsonIgnore
-    var angularVelocity: Double = PhysicsCalculator.angularVelocity(radius, rotationVelocity)
+    var angularVelocity: Float = PhysicsCalculator.angularVelocity(radius.value(), rotationVelocity)
     @JsonIgnore
     var resolution: DrawableResolution = DrawableResolution.VERY_FAR
 

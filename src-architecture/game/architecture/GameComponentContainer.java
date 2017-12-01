@@ -16,7 +16,6 @@ import engine.graphics.holders.GLUTHolder;
 import engine.managers.CelestialBodyManager;
 import engine.managers.ShipManager;
 import engine.managers.StarSystemManager;
-import engine.managers.TaskManager;
 import game.GameLoader;
 
 public abstract class GameComponentContainer {
@@ -24,7 +23,6 @@ public abstract class GameComponentContainer {
     protected static ShipManager shipManager = new ShipManager();
     protected static StarSystemManager starSystemManager = new StarSystemManager();
     protected static CelestialBodyManager celestialBodyManager = new CelestialBodyManager();
-    protected static TaskManager taskManager = new TaskManager();
 
     protected static CelestialBodyDrawer celestialBodyDrawer = new CelestialBodyDrawer();
     protected static ShipDrawer shipDrawer = new ShipDrawer();

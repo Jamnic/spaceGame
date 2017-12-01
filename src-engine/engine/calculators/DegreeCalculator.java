@@ -1,13 +1,11 @@
 package engine.calculators;
 
-import static game.architecture.Constants.FULL_CIRCLE;
-import static game.architecture.Constants.HALF_CIRCLE;
-import static game.architecture.Constants.QUARTER_CIRCLE;
 import model.Coords;
-import engine.utils.TextLogger;
 import model.celestials.parts.Sphere;
 import model.ship.parts.Engine;
 import model.ship.parts.Position;
+
+import static game.architecture.Constants.*;
 
 /**
  * Normalizes and calculates the degrees.
@@ -15,10 +13,11 @@ import model.ship.parts.Position;
 public final class DegreeCalculator {
 
     /* ========== PUBLIC ========== */
+
     /**
      * Normalizes the degrees.
      */
-    public static double normalize(double degree) {
+    public static float normalize(float degree) {
         if (degree >= FULL_CIRCLE) {
             degree -= FULL_CIRCLE;
         } else if (degree < 0) {
@@ -31,8 +30,8 @@ public final class DegreeCalculator {
     /**
      * Calculates the angle where ship should be heading to achieve its destination.
      */
-    public static double calculateHeadingAngle(Coords coords, Coords destination) {
-        double degree = Math.toDegrees(Math.atan2(destination.getX() - coords.getX(),
+    public static float calculateHeadingAngle(Coords coords, Coords destination) {
+        float degree = (float) Math.toDegrees(Math.atan2(destination.getX() - coords.getX(),
                 destination.getZ() - coords.getZ()));
 
         return normalize(degree - QUARTER_CIRCLE);
@@ -41,9 +40,9 @@ public final class DegreeCalculator {
     /**
      * Calculates the change of X rotation.
      */
-    public static double rotationXChange(double heading, double rotationX, double rotationXSpeed) {
+    public static float rotationXChange(float heading, float rotationX, float rotationXSpeed) {
 
-        double missing = heading - rotationX;
+        float missing = heading - rotationX;
         if (missing > HALF_CIRCLE) {
             missing = missing - FULL_CIRCLE;
         } else if (missing < -HALF_CIRCLE) {
@@ -57,8 +56,8 @@ public final class DegreeCalculator {
      * Rotates ship using rotation change parameters.
      */
     public static void rotateShip(Position position, Engine engine) {
-        position.setRotationX(DegreeCalculator.normalize(position.getRotationX() + engine.getRotationXChange()));
-        position.setRotationY(DegreeCalculator.normalize(position.getRotationY() + engine.getRotationYChange()));
+        position.setRotationX(position.getRotationX().plus(engine.getRotationXChange()));
+        position.setRotationY(position.getRotationY().plus(engine.getRotationYChange()));
     }
 
     /**

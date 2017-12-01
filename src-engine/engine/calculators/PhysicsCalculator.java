@@ -7,6 +7,8 @@ import static game.architecture.Constants.POWER_TWO;
 import static game.architecture.Constants.TWO_PI;
 import static game.architecture.Constants.VOLUME_PARAMETER;
 import static java.lang.Math.toRadians;
+
+import engine.math.Radius;
 import model.Coords;
 import model.celestials.CelestialBody;
 
@@ -19,7 +21,7 @@ public final class PhysicsCalculator {
     /**
      * Calculates angular rotationVelocity from given radius and radial rotationVelocity.
      */
-    public static final double angularVelocity(double radius, double velocity) {
+    public static final float angularVelocity(float radius, float velocity) {
         return radius > 0 ? (velocity * FULL_CIRCLE) / (radius * TWO_PI) : 0;
     }
 
@@ -33,8 +35,8 @@ public final class PhysicsCalculator {
     /**
      * Calculates gravity force between shipCoords and planetaryCoords of given radius.
      */
-    public static double gravityForce(Coords shipCoords, Coords planetaryCoords, double radius, double distance) {
-        return GRAVITY_CONSTANT * (VOLUME_PARAMETER * Math.PI * Math.pow(radius, POWER_THREE))
+    public static double gravityForce(Coords shipCoords, Coords planetaryCoords, Radius radius, double distance) {
+        return GRAVITY_CONSTANT * (VOLUME_PARAMETER * Math.PI * Math.pow(radius.value(), POWER_THREE))
                 / Math.pow(distance, POWER_TWO);
     }
 

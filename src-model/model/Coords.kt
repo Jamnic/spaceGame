@@ -1,31 +1,32 @@
 package model
 
+import engine.math.Distance
 import engine.utils.TextLogger
 
-/**
- * Represents mutable coordinates in 3D space.
- */
 class Coords {
 
-    /* ========== PRIVATE ========== */
-    /* ========== PROPERTIES ========== */
     var x: Double = 0.toDouble()
     var y: Double = 0.toDouble()
     var z: Double = 0.toDouble()
 
-    /* ========== PUBLIC ========== */
-    /** Used to create coordinates.  */
     constructor(x: Double, y: Double, z: Double) {
         this.x = x
         this.y = y
         this.z = z
     }
 
-    /** Used to clone coordinates.  */
     constructor(coords: Coords) {
         this.x = coords.x
         this.y = coords.y
         this.z = coords.z
+    }
+
+    fun distanceTo(coords: Coords) : Float {
+        val x = Math.pow(x - coords.x, 2.0)
+        val y = Math.pow(y - coords.y, 2.0)
+        val z = Math.pow(z - coords.z, 2.0)
+
+        return Math.sqrt(x + y + z).toFloat()
     }
 
     override fun toString(): String {

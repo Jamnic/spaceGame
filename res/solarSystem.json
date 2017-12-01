@@ -4,33 +4,33 @@
     "sphere" : {
       "rotation" : 0.0,
       "textureFile" : "solarSystem",
-      "radius" : 110.0,
+      "radius" : { },
       "inclination" : 0.0
     }
   },
   "ships" : [ {
     "id" : 1,
-    "position" : {
-      "coords" : {
-        "x" : 15000.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "rotationX" : 90.0,
-      "rotationY" : 0.0
-    },
-    "engine" : {
-      "velocity" : 0.0,
-      "acceleration" : 0.0,
-      "rotationSpeed" : 2.0,
-      "rotationXChange" : 0.0,
-      "rotationYChange" : 0.0
-    },
     "control" : {
-      "taskList" : [ ],
       "turbo" : false,
       "accelerating" : false,
       "braking" : false
+    },
+    "starSystem" : null,
+    "position" : {
+      "coords" : {
+        "x" : 1000.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "rotationX" : { },
+      "rotationY" : { }
+    },
+    "engine" : {
+      "rotationSpeed" : 2.0,
+      "velocity" : 0.0,
+      "acceleration" : 0.0,
+      "rotationXChange" : { },
+      "rotationYChange" : { }
     },
     "mesh" : {
       "id" : 0,
@@ -46,23 +46,8 @@
     "name" : "Sun",
     "orbit" : {
       "orbitting" : null,
-      "radius" : 0.0,
-      "position" : 0.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Sun",
-      "radius" : 1906.71,
-      "inclination" : 0.0
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 1,
@@ -73,42 +58,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 5806.5,
-      "position" : 120.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Mercury",
-      "radius" : 23.95,
-      "inclination" : 0.03
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 2,
@@ -119,42 +74,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 10849.5,
-      "position" : 60.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "VenusClouds",
-      "radius" : 60.230000000000004,
-      "inclination" : 2.64
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 3,
@@ -165,42 +90,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 15000.0,
-      "position" : 60.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Earth",
-      "radius" : 62.300000000000004,
-      "inclination" : 23.44
-    },
-    "clouds" : {
-      "textureFile" : "EarthClouds",
-      "radius" : 63.300000000000004
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 4,
@@ -215,61 +110,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 15000.0,
-          "position" : 60.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Earth",
-          "radius" : 62.300000000000004,
-          "inclination" : 23.44
-        },
-        "clouds" : {
-          "textureFile" : "EarthClouds",
-          "radius" : 63.300000000000004
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 1920.0,
-      "position" : 0.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Moon",
-      "radius" : 17.38,
-      "inclination" : 1.54
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 5,
@@ -280,42 +130,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 22854.0,
-      "position" : 100.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Mars",
-      "radius" : 34.02,
-      "inclination" : 25.19
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 6,
@@ -326,42 +146,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 78064.5,
-      "position" : 130.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Jupiter",
-      "radius" : 710.95,
-      "inclination" : 3.12
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 7,
@@ -376,61 +166,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 78064.5,
-          "position" : 130.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Jupiter",
-          "radius" : 710.95,
-          "inclination" : 3.12
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 2107.5,
-      "position" : 100.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Io",
-      "radius" : 18.21,
-      "inclination" : 1.0
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 8,
@@ -445,61 +190,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 78064.5,
-          "position" : 130.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Jupiter",
-          "radius" : 710.95,
-          "inclination" : 3.12
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 3352.5,
-      "position" : 80.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Europe",
-      "radius" : 15.610000000000001,
-      "inclination" : 1.0
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 9,
@@ -514,61 +214,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 78064.5,
-          "position" : 130.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Jupiter",
-          "radius" : 710.95,
-          "inclination" : 3.12
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 5355.0,
-      "position" : 100.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Ganymede",
-      "radius" : 26.310000000000002,
-      "inclination" : 1.0
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 10,
@@ -583,61 +238,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 78064.5,
-          "position" : 130.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Jupiter",
-          "radius" : 710.95,
-          "inclination" : 3.12
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 9412.5,
-      "position" : 100.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Callisto",
-      "radius" : 24.1,
-      "inclination" : 1.0
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 11,
@@ -648,42 +258,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 143055.0,
-      "position" : 21.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Saturn",
-      "radius" : 640.95,
-      "inclination" : 26.73
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "SaturnRings",
-      "innerRadius" : 840.95,
-      "outerRadius" : 1440.95
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 12,
@@ -698,61 +278,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 143055.0,
-          "position" : 21.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Saturn",
-          "radius" : 640.95,
-          "inclination" : 26.73
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "SaturnRings",
-          "innerRadius" : 840.95,
-          "outerRadius" : 1440.95
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 6112.5,
-      "position" : 51.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Titan",
-      "radius" : 25.75,
-      "inclination" : 0.31
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 13,
@@ -767,61 +302,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 143055.0,
-          "position" : 21.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Saturn",
-          "radius" : 640.95,
-          "inclination" : 26.73
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "SaturnRings",
-          "innerRadius" : 840.95,
-          "outerRadius" : 1440.95
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 2632.5,
-      "position" : 10.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Rhea",
-      "radius" : 7.640000000000001,
-      "inclination" : 0.33
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 14,
@@ -836,61 +326,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 143055.0,
-          "position" : 21.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Saturn",
-          "radius" : 640.95,
-          "inclination" : 26.73
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "SaturnRings",
-          "innerRadius" : 840.95,
-          "outerRadius" : 1440.95
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 17805.0,
-      "position" : 120.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Iapetus",
-      "radius" : 7.18,
-      "inclination" : 8.3
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 15,
@@ -905,61 +350,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 143055.0,
-          "position" : 21.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Saturn",
-          "radius" : 640.95,
-          "inclination" : 26.73
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "SaturnRings",
-          "innerRadius" : 840.95,
-          "outerRadius" : 1440.95
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 1890.0,
-      "position" : 70.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Dione",
-      "radius" : 5.59,
-      "inclination" : 0.03
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 16,
@@ -974,61 +374,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 143055.0,
-          "position" : 21.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Saturn",
-          "radius" : 640.95,
-          "inclination" : 26.73
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "SaturnRings",
-          "innerRadius" : 840.95,
-          "outerRadius" : 1440.95
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 2182.5,
-      "position" : 70.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Tethys",
-      "radius" : 5.29,
-      "inclination" : 1.09
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 17,
@@ -1039,42 +394,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 182868.0,
-      "position" : 100.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Uranus",
-      "radius" : 410.95,
-      "inclination" : 97.77
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 18,
@@ -1089,61 +414,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 182868.0,
-          "position" : 100.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Uranus",
-          "radius" : 410.95,
-          "inclination" : 97.77
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 2182.5,
-      "position" : 70.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Titania",
-      "radius" : 7.88,
-      "inclination" : 1.09
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 19,
@@ -1158,61 +438,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 182868.0,
-          "position" : 100.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Uranus",
-          "radius" : 410.95,
-          "inclination" : 97.77
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 2917.5,
-      "position" : 170.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Oberon",
-      "radius" : 7.61,
-      "inclination" : 1.09
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 20,
@@ -1227,61 +462,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 182868.0,
-          "position" : 100.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Uranus",
-          "radius" : 410.95,
-          "inclination" : 97.77
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 1327.5,
-      "position" : 270.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Umbriel",
-      "radius" : 5.84,
-      "inclination" : 1.09
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 21,
@@ -1296,61 +486,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 182868.0,
-          "position" : 100.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Uranus",
-          "radius" : 410.95,
-          "inclination" : 97.77
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 952.5,
-      "position" : 80.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Ariel",
-      "radius" : 5.78,
-      "inclination" : 1.09
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 22,
@@ -1361,42 +506,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 211033.5,
-      "position" : 0.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Neptune",
-      "radius" : 400.95,
-      "inclination" : 15.58
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 23,
@@ -1411,61 +526,16 @@
             "name" : "Sun",
             "orbit" : {
               "orbitting" : null,
-              "radius" : 0.0,
-              "position" : 0.0
-            },
-            "sphere" : {
-              "rotation" : 0.0,
-              "textureFile" : "Sun",
-              "radius" : 1906.71,
-              "inclination" : 0.0
-            },
-            "clouds" : {
-              "textureFile" : null,
-              "radius" : 0.0
-            },
-            "ring" : {
-              "textureFile" : "",
-              "innerRadius" : 0.0,
-              "outerRadius" : 0.0
+              "radius" : { },
+              "position" : { }
             }
           },
-          "radius" : 211033.5,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Neptune",
-          "radius" : 400.95,
-          "inclination" : 15.58
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 1920.0,
-      "position" : 70.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "Triton",
-      "radius" : 13.530000000000001,
-      "inclination" : 156.8
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     }
   }, {
     "id" : 24,
@@ -1476,42 +546,12 @@
         "name" : "Sun",
         "orbit" : {
           "orbitting" : null,
-          "radius" : 0.0,
-          "position" : 0.0
-        },
-        "sphere" : {
-          "rotation" : 0.0,
-          "textureFile" : "Sun",
-          "radius" : 1906.71,
-          "inclination" : 0.0
-        },
-        "clouds" : {
-          "textureFile" : null,
-          "radius" : 0.0
-        },
-        "ring" : {
-          "textureFile" : "",
-          "innerRadius" : 0.0,
-          "outerRadius" : 0.0
+          "radius" : { },
+          "position" : { }
         }
       },
-      "radius" : 69648.0,
-      "position" : 180.0
-    },
-    "sphere" : {
-      "rotation" : 0.0,
-      "textureFile" : "BlueGalaxy",
-      "radius" : 100.0,
-      "inclination" : 0.0
-    },
-    "clouds" : {
-      "textureFile" : null,
-      "radius" : 0.0
-    },
-    "ring" : {
-      "textureFile" : "",
-      "innerRadius" : 0.0,
-      "outerRadius" : 0.0
+      "radius" : { },
+      "position" : { }
     },
     "systemFromId" : 0,
     "systemToId" : 1

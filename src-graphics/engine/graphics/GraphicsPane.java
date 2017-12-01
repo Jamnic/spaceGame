@@ -22,19 +22,15 @@ import java.awt.*;
 import static engine.graphics.window.GameWindow.FRAME_HEIGHT;
 import static engine.graphics.window.GameWindow.FRAME_WIDTH;
 
-/**
- * Class that should be used to render scene.
- */
 public final class GraphicsPane extends GLJPanel implements GLEventListener {
 
-    /* ========== PUBLIC ========== */
     public GraphicsPane(GLCapabilities capabilities) {
         super(capabilities);
 
         setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         addGLEventListener(this);
 
-        PlayerShip ship = new PlayerShip(new Coords(10, 0, 0));
+        PlayerShip ship = new PlayerShip(new Coords(-1000, 0, 0));
 
         addKeyListener(new MainKeyListener(ship));
         addMouseMotionListener(new MainMouseListener(ship));
@@ -59,9 +55,9 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
         gl.glDepthFunc(GL2.GL_LEQUAL);
         gl.glHint(GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL2.GL_NICEST);
 
-        systemLoader.loadSystem(gl, ship);
+        systemLoader.loadSystem(ship);
 
-        createGameTickCounter(ship, this);
+        createGameTickCounter(this);
     }
 
     @Override
@@ -79,7 +75,7 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
         rotationOfShaking(gl);
 
         LightLoader.sunLight(gl);
-        drawSkyBox(gl);
+        drawSkyBox(gl, ship);
         drawSystem(gl);
         drawMessages();
 
@@ -118,7 +114,7 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
     private FPSCounter fpsCounter = new FPSCounter();
     private GameLoader systemLoader = GameComponentContainer.systemLoader;
 
-    private void createGameTickCounter(PlayerShip playerShip, GraphicsPane graphicsPane) {
+    private void createGameTickCounter(GraphicsPane graphicsPane) {
         GameTickThread gameTickThread = new GameTickThread(graphicsPane);
         gameTickThread.addTickable(systemLoader);
 
@@ -128,8 +124,8 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
     private void rotationOfShip(GL2 gl) {
         Position position = ship.getPosition();
 
-        gl.glRotated(position.getRotationY(), 0, 0, 1);
-        gl.glRotated(position.getRotationX(), 0, 1, 0);
+        gl.glRotated(position.getRotationY().value(), 0, 0, 1);
+        gl.glRotated(position.getRotationX().value(), 0, 1, 0);
     }
 
     private void rotationOfShaking(GL2 gl) {
@@ -146,16 +142,16 @@ public final class GraphicsPane extends GLJPanel implements GLEventListener {
         double z = position.getCoords().getZ();
 
         gl.glTranslated(-x, -y, -z);
-        systemLoader.drawObjects(gl);
+        systemLoader.drawObjects(gl, ship);
 
         gl.glPopMatrix();
     }
 
-    private void drawSkyBox(GL2 gl) {
+    private void drawSkyBox(GL2 gl, PlayerShip playerShip) {
         gl.glPushMatrix();
 
         gl.glRotated(90, 1, 0, 0); // Because the milky way graphic is rotated initially
-        systemLoader.drawCurrentSkyBox(gl);
+        systemLoader.drawCurrentSkyBox(gl, playerShip);
 
         gl.glPopMatrix();
     }

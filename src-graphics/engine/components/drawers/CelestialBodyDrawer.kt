@@ -28,17 +28,15 @@ class CelestialBodyDrawer : Drawer<CelestialBody>() {
 
     private fun drawSphere(gl: GL2, celestialBody: CelestialBody) {
 
-        val sphere = celestialBody.sphere
+        val sphere = celestialBody.sphere()
 
         gl.glPushMatrix()
 
         gl.glRotated(90.0, 1.0, 0.0, 0.0) // TODO how to avoid this rotation?
         gl.glRotated(sphere.inclination, 1.0, 0.0, 0.0)
-        gl.glRotated(sphere.rotation, 0.0, 0.0, 1.0)
+        gl.glRotatef(sphere.rotation, 0.0f, 0.0f, 1.0f)
 
-        celestialBody.sphere.draw(gl)
-        celestialBody.clouds.draw(gl)
-        celestialBody.ring.draw(gl)
+        celestialBody.draw(gl)
 
         gl.glPopMatrix()
     }

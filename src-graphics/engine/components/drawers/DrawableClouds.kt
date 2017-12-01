@@ -4,9 +4,9 @@ import com.jogamp.opengl.util.texture.Texture
 import model.celestials.parts.Clouds
 
 import javax.media.opengl.GL2
-import javax.media.opengl.glu.GLUquadric
 
 import engine.graphics.holders.GLUHolder.GLU
+import engine.math.Unit
 
 class DrawableClouds(
         private val clouds: Clouds,
@@ -18,9 +18,9 @@ class DrawableClouds(
 
         GLU.gluSphere(
                 this.quadric,
-                clouds.radius,
-                clouds.resolution.resolution,
-                clouds.resolution.resolution)
+                clouds.radius.value(Unit.THOUSAND_KM).toDouble(),
+                clouds.resolution.resolution(),
+                clouds.resolution.resolution())
 
         disableBlend(gl)
     }

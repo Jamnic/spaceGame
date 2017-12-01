@@ -4,6 +4,9 @@ import java.util.List;
 
 import javax.media.opengl.GL2;
 
+import engine.math.Distance;
+import engine.math.Radius;
+import engine.math.Unit;
 import model.Coords;
 import model.ship.PlayerShip;
 import model.ship.Ship;
@@ -45,7 +48,6 @@ public class ShipManager extends Manager<Ship> {
         updateCalculations(playerShip);
 
         for (Ship ship : ships) {
-            taskManager.executeTask(ship);
             updateDistance(ship, playerShip);
             updateCalculations(ship);
         }
@@ -74,15 +76,16 @@ public class ShipManager extends Manager<Ship> {
         double size = ship.getSize();
 
         // Distance
-        double distance = CoordsCalculator.distance(shipCoords, playerShipCoords);
+        double distance = shipCoords.distanceTo(playerShipCoords);
         setResolution(ship, size, distance);
 
         // TODO collisions
     }
 
     private void setResolution(Ship ship, double size, double distance) {
-        DrawableResolution resolution = DrawableResolution.determineResolution(size * Constants.SHIP_SIZE_MAGNIFIER,
-                distance);
+        Radius radius = new Radius((float) (size * Constants.SHIP_SIZE_MAGNIFIER), Unit.KM);
+        Distance distance1 = new Distance((float) distance, Unit.AU);
+        DrawableResolution resolution = DrawableResolution.Companion.determineResolution(distance1.div(radius));
         ship.setResolution(resolution);
     }
 }
