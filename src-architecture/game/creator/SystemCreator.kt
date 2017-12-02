@@ -2,100 +2,131 @@ package game.creator
 
 import engine.math.Degree
 import engine.math.Radius
-import engine.math.Unit
+import engine.math.ScaleUnit
+import engine.math.Velocity
+import game.architecture.Constants
 import game.architecture.Constants.*
 import game.architecture.GameComponentContainer
-import model.celestials.*
+import model.celestials.CelestialBody
+import model.celestials.Planet
+import model.celestials.Star
+import model.celestials.Wormhole
 import model.celestials.parts.*
 import model.system.parts.SkyBox
-import java.io.IOException
 
-/**
- * Class containing utility methods used to create planetary systems.
- *
- *
- * TODO systems should be parsed from JSON files.
- */
 abstract class SystemCreator {
 
     fun createSkyBox(name: String): SkyBox {
-        val radius = Radius(110f)
-        return SkyBox(Sphere(name, radius, 0.0f, 0.0))
+        return SkyBox(
+                Sphere(
+                        name,
+                        Radius(110f),
+                        Velocity(0.0f),
+                        0.0))
     }
 
-    @Throws(IOException::class)
-    fun planet(name: String, cloudsFileName: String?, ringName: String?, radius: Float,
-               rotationSpeed: Float, inclination: Double, orbittingBody: CelestialBody,
-               orbitRadius: Float,
-               orbitSpeed: Float, positionInOrbit: Float, bodies: MutableList<CelestialBody>): CelestialBody {
-        var orbitSpeed = orbitSpeed
-
-        orbitSpeed *= ORBITTING_PARAMETER.toFloat()
+    fun planet(
+            name: String,
+            cloudsFileName: String?,
+            ringName: String?,
+            radius: Float,
+            rotationSpeed: Float,
+            inclination: Double,
+            orbitingBody: CelestialBody,
+            orbitRadius: Float,
+            orbitSpeed: Float,
+            positionInOrbit: Float,
+            bodies: MutableList<CelestialBody>
+    ): CelestialBody {
 
         val ring = createRing(ringName, radius)
         val clouds = createClouds(cloudsFileName, radius)
 
-        val sphere = Sphere(name, Radius(radius), rotationSpeed, inclination)
-        val orbit = createOrbit(orbittingBody, orbitSpeed, positionInOrbit, Radius(orbitRadius, Unit.AU))
+        val sphere = Sphere(
+                name,
+                Radius(radius),
+                Velocity(rotationSpeed),
+                inclination)
+
+        val orbit = createOrbit(
+                orbitingBody,
+                Velocity(Constants.ORBITTING_PARAMETER * orbitSpeed),
+                positionInOrbit,
+                Radius(orbitRadius, ScaleUnit.AU))
 
         return addObject(Planet(name, orbit, clouds, ring, sphere), bodies)
     }
 
-    @Throws(IOException::class)
-    fun wormhole(name: String,
-                 radius: Double,
-                 rotationSpeed: Float,
-                 inclination: Double,
-                 orbittingBody: CelestialBody,
-                 orbitRadius: Float,
-                 orbitSpeed: Float,
-                 positionInOrbit: Float,
-                 systemFromId: Long,
-                 systemToId: Long,
-                 bodies: MutableList<CelestialBody>): CelestialBody {
-        var orbitSpeed = orbitSpeed
-
-        orbitSpeed *= ORBITTING_PARAMETER.toFloat()
-
-        val sphere = Sphere(name, Radius(radius.toFloat()), rotationSpeed, inclination)
-        val orbit = createOrbit(orbittingBody, orbitSpeed, positionInOrbit, Radius(orbitRadius, Unit.AU))
-
-        return addObject(Wormhole(name, orbit, sphere, systemFromId, systemToId), bodies)
+    fun moon(
+            name: String,
+            radius: Float,
+            rotationSpeed: Float,
+            inclination: Double,
+            orbitingBody: CelestialBody,
+            orbitRadius: Float,
+            orbitSpeed: Float,
+            positionInOrbit: Float,
+            bodies: MutableList<CelestialBody>
+    ): CelestialBody {
+        return planet(
+                name,
+                null,
+                null,
+                radius * 1.5f,
+                rotationSpeed,
+                inclination,
+                orbitingBody,
+                // TODO moons do not work well
+                orbitRadius,
+                orbitSpeed,
+                positionInOrbit,
+                bodies)
     }
 
-    @Throws(IOException::class)
-    fun star(name: String, radius: Double, rotationSpeed: Float, bodies: MutableList<CelestialBody>): Star {
+    fun star(
+            name: String,
+            radius: Float,
+            rotationSpeed: Float,
+            bodies: MutableList<CelestialBody>
+    ): Star {
 
-        val sphere = Sphere(name, Radius(radius.toFloat()), rotationSpeed, 0.0)
-        val orbit = createOrbit(null, 0f, 0f, Radius(0f, Unit.AU))
+        val sphere = Sphere(name, Radius(radius), Velocity(rotationSpeed), 0.0)
+        val orbit = createOrbit(null, Velocity(0f), 0f, Radius(0f, ScaleUnit.AU))
 
         return addObject(Star(name, orbit, sphere), bodies) as Star
     }
 
-    @Throws(IOException::class)
-    fun moon(name: String,
-             radius: Double,
-             rotationSpeed: Float,
-             inclination: Double,
-             orbittingBody: CelestialBody,
-             orbitRadius: Float,
-             orbitSpeed: Float,
-             positionInOrbit: Float,
-             bodies: MutableList<CelestialBody>): CelestialBody {
-        var orbitSpeed = orbitSpeed
+    fun wormhole(
+            name: String,
+            radius: Float,
+            rotationSpeed: Float,
+            inclination: Double,
+            orbittingBody: CelestialBody,
+            orbitRadius: Float,
+            orbitSpeed: Float,
+            positionInOrbit: Float,
+            systemFromId: Long,
+            systemToId: Long,
+            bodies: MutableList<CelestialBody>): CelestialBody {
 
-        orbitSpeed *= ORBITTING_PARAMETER.toFloat()
+        val sphere = Sphere(
+                name,
+                Radius(radius),
+                Velocity(rotationSpeed),
+                inclination)
 
-        val sphere = Sphere(name, Radius(radius.toFloat()), rotationSpeed, inclination)
-        val orbit = createOrbit(orbittingBody, orbitSpeed, positionInOrbit, Radius(orbitRadius, Unit.AU))
+        val orbit = createOrbit(
+                orbittingBody,
+                Velocity(orbitSpeed),
+                positionInOrbit,
+                Radius(orbitRadius, ScaleUnit.AU))
 
-        return addObject(Moon(name, orbit, sphere), bodies)
+        return addObject(Wormhole(name, orbit, sphere, systemFromId, systemToId), bodies)
     }
 
     private fun addObject(body: CelestialBody, bodies: MutableList<CelestialBody>): CelestialBody {
         bodies.add(body)
         GameComponentContainer.celestialBodyRepository.add(body)
-
         return body
     }
 
@@ -118,8 +149,12 @@ abstract class SystemCreator {
         }
     }
 
-    private fun createOrbit(orbittingBody: CelestialBody?, orbitSpeed: Float,
-                        positionInOrbit: Float, radius: Radius): Orbit {
+    private fun createOrbit(
+            orbittingBody: CelestialBody?,
+            orbitSpeed: Velocity,
+            positionInOrbit: Float,
+            radius: Radius
+    ): Orbit {
 
         return Orbit(orbittingBody, radius, orbitSpeed, Degree(positionInOrbit))
     }

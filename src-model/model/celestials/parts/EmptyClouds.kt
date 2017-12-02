@@ -2,7 +2,7 @@ package model.celestials.parts
 
 import com.fasterxml.jackson.annotation.JsonCreator
 import engine.math.Radius
-import engine.math.Unit.KM
+import engine.math.ScaleUnit.KM
 import javax.media.opengl.GL2
 
 class EmptyClouds

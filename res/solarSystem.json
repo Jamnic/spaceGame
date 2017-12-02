@@ -2,7 +2,10 @@
   "id" : 0,
   "skyBox" : {
     "sphere" : {
-      "rotation" : 0.0,
+      "rotation" : { },
+      "angularVelocity" : 0.0,
+      "resolution" : "MEDIUM",
+      "drawable" : null,
       "textureFile" : "solarSystem",
       "radius" : { },
       "inclination" : 0.0
@@ -10,6 +13,7 @@
   },
   "ships" : [ {
     "id" : 1,
+    "resolution" : "VERY_CLOSE",
     "control" : {
       "turbo" : false,
       "accelerating" : false,
@@ -18,7 +22,7 @@
     "starSystem" : null,
     "position" : {
       "coords" : {
-        "x" : 1000.0,
+        "x" : -950.0,
         "y" : 0.0,
         "z" : 0.0
       },
@@ -39,12 +43,18 @@
       "normalIndex" : 0,
       "textureIndex" : 0
     },
-    "size" : 1.0
+    "size" : 10.0
   } ],
   "celestialBodies" : [ {
     "id" : 0,
     "name" : "Sun",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.0,
       "orbitting" : null,
       "radius" : { },
       "position" : { }
@@ -53,10 +63,22 @@
     "id" : 1,
     "name" : "Mercury",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.07085375,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -69,10 +91,22 @@
     "id" : 2,
     "name" : "VenusClouds",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.02774088,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -85,10 +119,22 @@
     "id" : 3,
     "name" : "Earth",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.017062683,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -101,14 +147,32 @@
     "id" : 4,
     "name" : "Moon",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 2.2873547,
       "orbitting" : {
         "id" : 3,
         "name" : "Earth",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.017062683,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -125,10 +189,22 @@
     "id" : 5,
     "name" : "Mars",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.009085495,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -141,10 +217,22 @@
     "id" : 6,
     "name" : "Jupiter",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.0019618599,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -157,14 +245,32 @@
     "id" : 7,
     "name" : "Io",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 26.649672,
       "orbitting" : {
         "id" : 6,
         "name" : "Jupiter",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0019618599,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -181,14 +287,32 @@
     "id" : 8,
     "name" : "Europe",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 1.922677,
       "orbitting" : {
         "id" : 6,
         "name" : "Jupiter",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0019618599,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -205,14 +329,32 @@
     "id" : 9,
     "name" : "Ganymede",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 1.2036927,
       "orbitting" : {
         "id" : 6,
         "name" : "Jupiter",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0019618599,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -229,14 +371,32 @@
     "id" : 10,
     "name" : "Callisto",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.6848101,
       "orbitting" : {
         "id" : 6,
         "name" : "Jupiter",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0019618599,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -253,10 +413,22 @@
     "id" : 11,
     "name" : "Saturn",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 5.78545E-4,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -269,14 +441,32 @@
     "id" : 12,
     "name" : "Titan",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 1.0545235,
       "orbitting" : {
         "id" : 11,
         "name" : "Saturn",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 5.78545E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -293,14 +483,32 @@
     "id" : 13,
     "name" : "Rhea",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 2.4485373,
       "orbitting" : {
         "id" : 11,
         "name" : "Saturn",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 5.78545E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -317,14 +525,32 @@
     "id" : 14,
     "name" : "Iapetus",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.3620205,
       "orbitting" : {
         "id" : 11,
         "name" : "Saturn",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 5.78545E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -341,14 +567,32 @@
     "id" : 15,
     "name" : "Dione",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 3.4104629,
       "orbitting" : {
         "id" : 11,
         "name" : "Saturn",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 5.78545E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -365,14 +609,32 @@
     "id" : 16,
     "name" : "Tethys",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 2.9533904,
       "orbitting" : {
         "id" : 11,
         "name" : "Saturn",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 5.78545E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -389,10 +651,22 @@
     "id" : 17,
     "name" : "Uranus",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 3.1911407E-4,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -405,14 +679,32 @@
     "id" : 18,
     "name" : "Titania",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 2.9533904,
       "orbitting" : {
         "id" : 17,
         "name" : "Uranus",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 3.1911407E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -429,14 +721,32 @@
     "id" : 19,
     "name" : "Oberon",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 2.2093487,
       "orbitting" : {
         "id" : 17,
         "name" : "Uranus",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 3.1911407E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -453,14 +763,32 @@
     "id" : 20,
     "name" : "Umbriel",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 4.855574,
       "orbitting" : {
         "id" : 17,
         "name" : "Uranus",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 3.1911407E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -477,14 +805,32 @@
     "id" : 21,
     "name" : "Ariel",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 6.767217,
       "orbitting" : {
         "id" : 17,
         "name" : "Uranus",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 3.1911407E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -501,10 +847,22 @@
     "id" : 22,
     "name" : "Neptune",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 2.231737E-4,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -517,14 +875,32 @@
     "id" : 23,
     "name" : "Triton",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : -10.631052,
       "orbitting" : {
         "id" : 22,
         "name" : "Neptune",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 2.231737E-4,
           "orbitting" : {
             "id" : 0,
             "name" : "Sun",
             "orbit" : {
+              "coords" : {
+                "x" : 0.0,
+                "y" : 0.0,
+                "z" : 0.0
+              },
+              "angularVelocity" : 0.0,
               "orbitting" : null,
               "radius" : { },
               "position" : { }
@@ -541,10 +917,22 @@
     "id" : 24,
     "name" : "BlueGalaxy",
     "orbit" : {
+      "coords" : {
+        "x" : 0.0,
+        "y" : 0.0,
+        "z" : 0.0
+      },
+      "angularVelocity" : 0.0012734588,
       "orbitting" : {
         "id" : 0,
         "name" : "Sun",
         "orbit" : {
+          "coords" : {
+            "x" : 0.0,
+            "y" : 0.0,
+            "z" : 0.0
+          },
+          "angularVelocity" : 0.0,
           "orbitting" : null,
           "radius" : { },
           "position" : { }
@@ -555,6 +943,5 @@
     },
     "systemFromId" : 0,
     "systemToId" : 1
-  } ],
-  "visible" : false
+  } ]
 }

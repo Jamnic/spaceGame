@@ -1,6 +1,5 @@
 package model
 
-import engine.math.Distance
 import engine.utils.TextLogger
 
 class Coords {
@@ -21,7 +20,14 @@ class Coords {
         this.z = coords.z
     }
 
-    fun distanceTo(coords: Coords) : Float {
+    // TODO consider making it immutable
+    operator fun plusAssign(coords: Coords) {
+        x += coords.x
+        y += coords.y
+        z += coords.z
+    }
+
+    fun distanceTo(coords: Coords): Float {
         val x = Math.pow(x - coords.x, 2.0)
         val y = Math.pow(y - coords.y, 2.0)
         val z = Math.pow(z - coords.z, 2.0)

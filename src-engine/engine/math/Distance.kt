@@ -3,21 +3,17 @@ package engine.math
 import model.Coords
 
 open class Distance(
-        private val value: Float,
-        private val unit: Unit = Unit.KM
+        protected val value: Float,
+        protected val unit: ScaleUnit = ScaleUnit.KM
 ) {
-
-    constructor(
-            doubleValue: Double
-    ) : this(doubleValue.toFloat())
 
     constructor(
             firstCoords: Coords,
             secondCoords: Coords,
-            unit: Unit
+            unit: ScaleUnit
     ) : this(firstCoords.distanceTo(secondCoords), unit)
 
-    fun value(newUnit: Unit): Float {
+    fun value(newUnit: ScaleUnit): Float {
         return if (unit == newUnit)
             value
         else
@@ -26,6 +22,10 @@ open class Distance(
 
     fun value(): Float {
         return value
+    }
+
+    fun unit(): ScaleUnit {
+        return unit
     }
 
     fun div(distance: Distance): Float {

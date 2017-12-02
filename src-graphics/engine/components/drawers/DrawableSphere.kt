@@ -6,7 +6,7 @@ import model.celestials.parts.Sphere
 import javax.media.opengl.GL2
 
 import engine.graphics.holders.GLUHolder.GLU
-import engine.math.Unit
+import engine.math.ScaleUnit
 
 class DrawableSphere(
         private val sphere: Sphere,
@@ -16,7 +16,7 @@ class DrawableSphere(
     override fun drawElement(gl: GL2) {
         GLU.gluSphere(
                 this.quadric,
-                sphere.radius.value(Unit.THOUSAND_KM).toDouble(),
+                sphere.radius.value(ScaleUnit.THOUSAND_KM).toDouble(),
                 sphere.resolution.resolution(),
                 sphere.resolution.resolution())
     }

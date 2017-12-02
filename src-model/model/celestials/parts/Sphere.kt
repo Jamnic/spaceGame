@@ -1,10 +1,11 @@
 package model.celestials.parts
 
-import com.fasterxml.jackson.annotation.JsonCreator
-import com.fasterxml.jackson.annotation.JsonIgnore
 import engine.calculators.PhysicsCalculator
 import engine.components.drawers.DrawableSphere
+import engine.math.AngularVelocity
+import engine.math.Degree
 import engine.math.Radius
+import engine.math.Velocity
 import engine.utils.TextureLoader
 import model.celestials.CelestialBody
 import model.interfaces.Drawable
@@ -18,23 +19,21 @@ import javax.media.opengl.GL2
  * - mass - json ignore, calculated from volume and density<br></br>
  * - density<br></br>
  */
-class Sphere
-@JsonCreator
-constructor(
+class Sphere(
         var textureFile: String?,
         var radius: Radius,
-        rotationVelocity: Float,
+        rotationVelocity: Velocity,
         var inclination: Double
 ) : Drawable {
-    var rotation: Float = 0f
+    var rotation: Degree = Degree.ZERO
 
-    @JsonIgnore
-    var angularVelocity: Float = PhysicsCalculator.angularVelocity(radius.value(), rotationVelocity)
-    @JsonIgnore
+    var angularVelocity: AngularVelocity = AngularVelocity(radius, rotationVelocity)
     var resolution: DrawableResolution = DrawableResolution.VERY_FAR
-
-    @JsonIgnore
     var drawable: DrawableSphere? = null
+
+    fun radius(): Radius {
+        return radius
+    }
 
     override fun draw(gl: GL2) {
         if (this.drawable == null) {
@@ -42,5 +41,13 @@ constructor(
         }
 
         this.drawable?.draw(gl)
+    }
+
+    fun tick() {
+        rotateSphere()
+    }
+
+    private fun rotateSphere() {
+        rotation = (rotation + angularVelocity).normalize()
     }
 }

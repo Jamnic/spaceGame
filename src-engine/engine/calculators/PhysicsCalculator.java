@@ -8,6 +8,7 @@ import static game.architecture.Constants.TWO_PI;
 import static game.architecture.Constants.VOLUME_PARAMETER;
 import static java.lang.Math.toRadians;
 
+import engine.math.AngularVelocity;
 import engine.math.Radius;
 import model.Coords;
 import model.celestials.CelestialBody;
@@ -17,27 +18,11 @@ import model.celestials.CelestialBody;
  */
 public final class PhysicsCalculator {
 
-    /* ========== PUBLIC ========== */
-    /**
-     * Calculates angular rotationVelocity from given radius and radial rotationVelocity.
-     */
-    public static final float angularVelocity(float radius, float velocity) {
-        return radius > 0 ? (velocity * FULL_CIRCLE) / (radius * TWO_PI) : 0;
-    }
-
     /**
      * Calculates the inclined Y coordinate of {@link CelestialBody}.
      */
     public static final double inclinedYCoordinate(double positionInRadians, double inclination, double orbitRadius) {
         return inclination == 0 ? 0 : -orbitRadius * Math.sin(toRadians(inclination)) * Math.cos(positionInRadians);
-    }
-
-    /**
-     * Calculates gravity force between shipCoords and planetaryCoords of given radius.
-     */
-    public static double gravityForce(Coords shipCoords, Coords planetaryCoords, Radius radius, double distance) {
-        return GRAVITY_CONSTANT * (VOLUME_PARAMETER * Math.PI * Math.pow(radius.value(), POWER_THREE))
-                / Math.pow(distance, POWER_TWO);
     }
 
     /* ========== PRIVATE ========== */

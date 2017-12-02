@@ -11,9 +11,7 @@ public interface Constants {
     // System creation constants
     float SCALE = 0.01f;
 
-    float ROTATION_PARAMETER = 1f * SCALE; // change to angular rotationVelocity
-    double ORBITTING_PARAMETER = 0.001 * SCALE;
-    double MOON_VARIABLE = 50000 * SCALE;
+    float ORBITTING_PARAMETER = 0.001f * SCALE;
 
     float INNER_RING_RADIUS = 20000;
     float OUTER_RING_RADIUS = 80000;
@@ -34,12 +32,9 @@ public interface Constants {
     // Math constants
     int POWER_TWO = 2;
     int POWER_THREE = 3;
-    Coords ZERO_COORDINATE = new Coords(0, 0, 0);
 
     // Circle constants
-    int QUARTER_CIRCLE = 90;
     float FULL_CIRCLE = 360;
-    double HALF_CIRCLE = 180;
 
     // Physics
     double GRAVITY_CONSTANT = 0.00001;

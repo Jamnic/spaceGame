@@ -19,8 +19,7 @@ open class Ship(
         var mesh: Mesh?,
         var size: Double
 ) : StarSystemObject<Ship>(Ship::class.java, position.coords) {
-    @JsonIgnore
-    var resolution: DrawableResolution = DrawableResolution.VERY_FAR
+    var resolution: DrawableResolution = DrawableResolution.VERY_CLOSE
     var control: Control = Control()
     var starSystem: StarSystem? = null
 
@@ -30,7 +29,7 @@ open class Ship(
 
     fun updateDistance(body: CelestialBody) {
         val distance = distance(body)
-        body.updateResolution(resolution(distance, body.sphere().radius))
+        body.updateResolution(resolution(distance, body.radius()))
         checkCollisions(body, distance)
     }
 
@@ -40,7 +39,7 @@ open class Ship(
 
     private fun checkCollisions(body: CelestialBody, distance: Distance) {
         if (body is Wormhole) {
-            if (distance.lessThan(body.sphere().radius)) {
+            if (distance.lessThan(body.radius())) {
                 starSystem = GameComponentContainer.starSystemRepository.getById(body.systemToId)
             }
         }

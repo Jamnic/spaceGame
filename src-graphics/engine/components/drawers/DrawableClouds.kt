@@ -6,7 +6,7 @@ import model.celestials.parts.Clouds
 import javax.media.opengl.GL2
 
 import engine.graphics.holders.GLUHolder.GLU
-import engine.math.Unit
+import engine.math.ScaleUnit
 
 class DrawableClouds(
         private val clouds: Clouds,
@@ -18,7 +18,7 @@ class DrawableClouds(
 
         GLU.gluSphere(
                 this.quadric,
-                clouds.radius.value(Unit.THOUSAND_KM).toDouble(),
+                clouds.radius.value(ScaleUnit.THOUSAND_KM).toDouble(),
                 clouds.resolution.resolution(),
                 clouds.resolution.resolution())
 

@@ -1,7 +1,7 @@
 package model
 
 import engine.math.Distance
-import engine.math.Unit
+import engine.math.ScaleUnit
 import game.architecture.Entity
 import model.celestials.CelestialBody
 
@@ -11,6 +11,6 @@ abstract class StarSystemObject<T>(
 ) : Entity(clazz) {
 
     fun distance(body: CelestialBody): Distance {
-        return Distance(body.orbit.coords, coords, Unit.THOUSAND_KM)
+        return Distance(body.orbit.coords, coords, ScaleUnit.THOUSAND_KM)
     }
 }

@@ -5,6 +5,8 @@ import game.architecture.Constants
 data class Degree(
         private val value: Float
 ) {
+    constructor(doubleValue: Double) : this(doubleValue.toFloat())
+
     companion object {
         val ZERO = Degree(0F)
     }
@@ -13,9 +15,12 @@ data class Degree(
         return value
     }
 
-    // TODO plus operator
     operator fun plus(degree: Degree): Degree {
         return Degree(degree.value + value)
+    }
+
+    operator fun plus(angularVelocity: AngularVelocity): Degree {
+        return Degree(angularVelocity.velocity(ScaleUnit.KM) + value)
     }
 
     // TODO normalize more than only one full circle
@@ -27,11 +32,15 @@ data class Degree(
         }
     }
 
-    fun toRadians() : Radian {
+    fun toRadians(): Radian {
         return Radian(Math.toRadians(value.toDouble()))
     }
 
     operator fun times(float: Float): Degree {
         return Degree(value * float)
+    }
+
+    operator fun div(toCircuit: Circuit): Float {
+        return value / toCircuit.length()
     }
 }
