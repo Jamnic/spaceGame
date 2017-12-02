@@ -1,6 +1,5 @@
 package model.ship
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import engine.math.Distance
 import engine.math.Radius
 import game.architecture.GameComponentContainer
@@ -17,8 +16,9 @@ open class Ship(
         var position: Position,
         var engine: Engine,
         var mesh: Mesh?,
-        var size: Double
+        val size: Float
 ) : StarSystemObject<Ship>(Ship::class.java, position.coords) {
+
     var resolution: DrawableResolution = DrawableResolution.VERY_CLOSE
     var control: Control = Control()
     var starSystem: StarSystem? = null

@@ -39,13 +39,13 @@ open class CelestialBody(
             else
                 LightLoader.planetaryLight(gl)
 
-            gl.glTranslated(orbit.coords.x, orbit.coords.y, orbit.coords.z)
+            gl.glTranslatef(orbit.coords.x, orbit.coords.y, orbit.coords.z)
 
             gl.glPushMatrix()
 
             gl.glRotated(90.0, 1.0, 0.0, 0.0) // TODO how to avoid this rotation?
-            gl.glRotated(sphere.inclination, 1.0, 0.0, 0.0)
-            gl.glRotatef(sphere.rotation.value(), 0.0f, 0.0f, 1.0f)
+            gl.glRotatef(sphere.inclination.value(), 1.0F, 0.0F, 0.0F)
+            gl.glRotatef(sphere.rotation.value(), 0.0F, 0.0F, 1.0F)
 
             drawComponents(gl)
 
@@ -70,14 +70,14 @@ open class CelestialBody(
     }
 
     private fun calculateOrbitalPosition(orbit: Orbit, orbitingBodySphere: Sphere) {
-        val radius = orbit.radius.value(ScaleUnit.THOUSAND_KM).toDouble()
-        val radiansPosition = orbit.position.toRadians().value().toDouble()
+        val radius = orbit.radius.value(ScaleUnit.THOUSAND_KM)
+        val radiansPosition = orbit.position.toRadians().value()
         val inclination = orbitingBodySphere.inclination
         val coords = orbit.coords
 
-        coords.x = Math.sin(radiansPosition) * radius
-        coords.y = PhysicsCalculator.inclinedYCoordinate(radiansPosition, inclination, radius)
-        coords.z = Math.cos(radiansPosition) * radius
+        coords.x = Math.sin(radiansPosition.toDouble()).toFloat() * radius
+        coords.y = PhysicsCalculator.inclinedYCoordinate(radiansPosition, inclination.value(), radius)
+        coords.z = Math.cos(radiansPosition.toDouble()).toFloat() * radius
     }
 
     private fun visible(): Boolean {

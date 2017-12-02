@@ -13,7 +13,7 @@ class Orbit(
         velocity: Velocity,
         var position: Degree
 ) {
-    var coords: Coords = Coords(0.0, 0.0, 0.0)
+    var coords: Coords = Coords()
     var angularVelocity: AngularVelocity = AngularVelocity(radius, velocity)
 
     fun tick() {

@@ -74,35 +74,30 @@ class ShipManager : Manager<Ship>() {
         // Parameters
         val playerShipCoords = playerShip.position.coords
         val shipCoords = ship.position.coords
-        val size = ship.size
 
         // Distance
         val distance = shipCoords.distanceTo(playerShipCoords).toDouble()
-        setResolution(ship, size, distance)
+        setResolution(ship, distance)
 
         // TODO collisions
     }
 
-    private fun setResolution(ship: Ship, size: Double, distance: Double) {
-        val radius = Radius((size * Constants.SHIP_SIZE_MAGNIFIER).toFloat(), ScaleUnit.KM)
+    private fun setResolution(ship: Ship, distance: Double) {
+        val radius = Radius((ship.size * Constants.SHIP_SIZE_MAGNIFIER).toFloat(), ScaleUnit.KM)
         val distance1 = Distance(distance.toFloat(), engine.math.ScaleUnit.AU)
         val resolution = DrawableResolution.determineResolution(distance1.div(radius))
         ship.resolution = resolution
     }
 
     private fun setShipPosition(position: Position, engine: Engine) {
-
-        val velocity = engine.velocity.toDouble()
-
+        val velocity = engine.velocity
         val coords = position.coords
-        val rotationX = position.rotationX
-        val rotationY = position.rotationY
 
-        val value = rotationX.toRadians()
-        val value1 = rotationY.toRadians().negate()
+        val rotationX = position.rotationX.toRadians()
+        val rotationY = position.rotationY.toRadians().negate()
 
-        coords.x = coords.x + velocity * cos(value.value().toDouble())
-        coords.y = coords.y + velocity * sin(value1.value().toDouble())
-        coords.z = coords.z + velocity * sin(value.value().toDouble())
+        coords.x = coords.x + velocity * Math.cos(rotationX.value().toDouble()).toFloat()
+        coords.y = coords.y + velocity * Math.sin(rotationY.value().toDouble()).toFloat()
+        coords.z = coords.z + velocity * Math.sin(rotationX.value().toDouble()).toFloat()
     }
 }

@@ -23,7 +23,7 @@ class Sphere(
         var textureFile: String?,
         var radius: Radius,
         rotationVelocity: Velocity,
-        var inclination: Double
+        var inclination: Degree
 ) : Drawable {
     var rotation: Degree = Degree.ZERO
 

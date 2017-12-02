@@ -5,7 +5,6 @@ import engine.graphics.listeners.MainMouseListener
 import engine.graphics.window.GameWindow.FRAME_HEIGHT
 import engine.graphics.window.GameWindow.FRAME_WIDTH
 import engine.thread.GameTickThread
-import engine.utils.LightLoader
 import engine.utils.TextLogger
 import game.GameLoader
 import model.Coords
@@ -21,7 +20,7 @@ class GraphicsPane(
         capabilities: GLCapabilities
 ) : GLJPanel(capabilities), GLEventListener {
 
-    private val ship = PlayerShip(Coords(-1000.0, 0.0, 0.0))
+    private val ship = PlayerShip(Coords(-1000.0F, 0.0F, 0.0F))
     private var perspective = 60.0
     private val shaker = Shaker()
     private val camera = Camera()
@@ -64,7 +63,7 @@ class GraphicsPane(
         fpsCounter.tick()
 
         if (shaker.cooldown)
-            perspectiveCooldown()
+            perspectiveCoolDown()
 
         if (ship.control.isTurbo) {
             shake()
@@ -76,7 +75,6 @@ class GraphicsPane(
         rotationOfShaking(gl)
 
         drawSkyBox(gl, ship)
-        LightLoader.sunLight(gl)
         drawSystem(gl)
         drawMessages()
 
@@ -123,7 +121,7 @@ class GraphicsPane(
         val y = position.coords.y
         val z = position.coords.z
 
-        gl.glTranslated(-x, -y, -z)
+        gl.glTranslatef(-x, -y, -z)
         systemLoader.drawObjects(gl, ship)
 
         gl.glPopMatrix()
@@ -143,15 +141,13 @@ class GraphicsPane(
         val engine = ship.engine
 
         textDrawer.text2D("FPS: " + fpsCounter.fps(), 0, FRAME_HEIGHT - 10)
-        textDrawer.text2D("Velocity: " + TextLogger.twoDecimal((engine.velocity * 100).toDouble()), 0, FRAME_HEIGHT - 20)
-        textDrawer
-                .text2D("Acceleration: " + TextLogger.twoDecimal((engine.acceleration * 100).toDouble()), 0, FRAME_HEIGHT - 30)
-        textDrawer.text2D(
-                "X: " + TextLogger.twoDecimal(position.coords.x) + ", Y: " + TextLogger.twoDecimal(position.coords.y)
-                        + ", Z: " + TextLogger.twoDecimal(position.coords.z), 0, FRAME_HEIGHT - 40)
+        textDrawer.text2D("Velocity: " + TextLogger.twoDecimal((engine.velocity)), 0, FRAME_HEIGHT - 20)
+        textDrawer.text2D("Acceleration: " + TextLogger.twoDecimal((engine.acceleration)), 0, FRAME_HEIGHT - 30)
+        textDrawer.text2D("X: " + TextLogger.twoDecimal(position.coords.x) + ", Y: " + TextLogger.twoDecimal(position.coords.y)
+                + ", Z: " + TextLogger.twoDecimal(position.coords.z), 0, FRAME_HEIGHT - 40)
     }
 
-    private fun perspectiveCooldown() {
+    private fun perspectiveCoolDown() {
         if (perspective > 30)
             perspective -= 1.0
         else

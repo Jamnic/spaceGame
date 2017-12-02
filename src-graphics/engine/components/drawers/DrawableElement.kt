@@ -21,7 +21,6 @@ abstract class DrawableElement(
         }
 
         drawElement(gl)
-
         disableTexture(gl)
     }
 

@@ -28,11 +28,11 @@ class SolarSystemCreator : SystemCreator() {
         ships.add(
                 Ship(
                         Position(
-                                Coords(-950.0, 0.0, 0.0),
+                                Coords(-950.0F, 0.0F, 0.0F),
                                 Degree(90f),
                                 Degree(0f)),
                         Engine(2f, 0f, 0f, Degree.ZERO, Degree.ZERO),
-                        exxonDrawer, 10.0))
+                        exxonDrawer, 10.0F))
 
         GameComponentContainer.shipRepository.add(ships)
 

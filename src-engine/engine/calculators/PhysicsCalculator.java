@@ -21,8 +21,10 @@ public final class PhysicsCalculator {
     /**
      * Calculates the inclined Y coordinate of {@link CelestialBody}.
      */
-    public static final double inclinedYCoordinate(double positionInRadians, double inclination, double orbitRadius) {
-        return inclination == 0 ? 0 : -orbitRadius * Math.sin(toRadians(inclination)) * Math.cos(positionInRadians);
+    public static final float inclinedYCoordinate(float positionInRadians, float inclination, float orbitRadius) {
+        return inclination == 0
+                ? 0F
+                : (float) (-orbitRadius * Math.sin(toRadians(inclination)) * Math.cos(positionInRadians));
     }
 
     /* ========== PRIVATE ========== */

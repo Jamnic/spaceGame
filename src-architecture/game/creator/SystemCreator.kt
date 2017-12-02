@@ -22,7 +22,7 @@ abstract class SystemCreator {
                         name,
                         Radius(110f),
                         Velocity(0.0f),
-                        0.0))
+                        Degree.ZERO))
     }
 
     fun planet(
@@ -46,7 +46,7 @@ abstract class SystemCreator {
                 name,
                 Radius(radius),
                 Velocity(rotationSpeed),
-                inclination)
+                Degree(inclination))
 
         val orbit = createOrbit(
                 orbitingBody,
@@ -90,7 +90,12 @@ abstract class SystemCreator {
             bodies: MutableList<CelestialBody>
     ): Star {
 
-        val sphere = Sphere(name, Radius(radius), Velocity(rotationSpeed), 0.0)
+        val sphere = Sphere(
+                name,
+                Radius(radius),
+                Velocity(rotationSpeed),
+                Degree.ZERO)
+
         val orbit = createOrbit(null, Velocity(0f), 0f, Radius(0f, ScaleUnit.AU))
 
         return addObject(Star(name, orbit, sphere), bodies) as Star
@@ -113,7 +118,7 @@ abstract class SystemCreator {
                 name,
                 Radius(radius),
                 Velocity(rotationSpeed),
-                inclination)
+                Degree(inclination))
 
         val orbit = createOrbit(
                 orbittingBody,
