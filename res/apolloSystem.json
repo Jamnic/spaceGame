@@ -1,606 +1,624 @@
 {
-  "id" : 1,
-  "skyBox" : {
-    "sphere" : {
-      "rotation" : { },
-      "angularVelocity" : 0.0,
-      "resolution" : "MEDIUM",
-      "drawable" : null,
-      "textureFile" : "BlueGalaxy",
-      "radius" : { },
-      "inclination" : 0.0
+  "id": 1,
+  "skyBox": {
+    "sphere": {
+      "rotation": {},
+      "angularVelocity": 0.0,
+      "resolution": "MEDIUM",
+      "drawable": null,
+      "textureFile": "BlueGalaxy",
+      "radius": {},
+      "inclination": 0.0
     }
   },
-  "ships" : [ ],
-  "celestialBodies" : [ {
-    "id" : 25,
-    "name" : "Apollo",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 0.0,
-      "orbitting" : null,
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 26,
-    "name" : "Zorh",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 0.07456009,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 27,
-    "name" : "Anthony",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 0.034363177,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 28,
-    "name" : "David",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 0.013886216,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 29,
-    "name" : "Murmillo",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 2.1455438,
-      "orbitting" : {
-        "id" : 28,
-        "name" : "David",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.013886216,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 30,
-    "name" : "Retarius",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 3.8162143,
-      "orbitting" : {
-        "id" : 28,
-        "name" : "David",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.013886216,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 31,
-    "name" : "Alicia",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 0.002447695,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 32,
-    "name" : "Julio",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 2.616147,
-      "orbitting" : {
-        "id" : 31,
-        "name" : "Alicia",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.002447695,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 33,
-    "name" : "Maya",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 1.8569971,
-      "orbitting" : {
-        "id" : 31,
-        "name" : "Alicia",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.002447695,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 34,
-    "name" : "Leo",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 2.0902884,
-      "orbitting" : {
-        "id" : 31,
-        "name" : "Alicia",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.002447695,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 35,
-    "name" : "Julia",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 1.9902744,
-      "orbitting" : {
-        "id" : 31,
-        "name" : "Alicia",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.002447695,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 36,
-    "name" : "Victor",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 7.320018E-4,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 37,
-    "name" : "Hoth",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 1.9257748,
-      "orbitting" : {
-        "id" : 36,
-        "name" : "Victor",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 7.320018E-4,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 38,
-    "name" : "Polie",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 1.6060517,
-      "orbitting" : {
-        "id" : 36,
-        "name" : "Victor",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 7.320018E-4,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 39,
-    "name" : "Barr",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 1.3247368,
-      "orbitting" : {
-        "id" : 36,
-        "name" : "Victor",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 7.320018E-4,
-          "orbitting" : {
-            "id" : 25,
-            "name" : "Apollo",
-            "orbit" : {
-              "coords" : {
-                "x" : 0.0,
-                "y" : 0.0,
-                "z" : 0.0
-              },
-              "angularVelocity" : 0.0,
-              "orbitting" : null,
-              "radius" : { },
-              "position" : { }
-            }
-          },
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 40,
-    "name" : "Ninurta",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 6.3856744E-4,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
-    }
-  }, {
-    "id" : 41,
-    "name" : "solarSystem",
-    "orbit" : {
-      "coords" : {
-        "x" : 0.0,
-        "y" : 0.0,
-        "z" : 0.0
-      },
-      "angularVelocity" : 0.0012734588,
-      "orbitting" : {
-        "id" : 25,
-        "name" : "Apollo",
-        "orbit" : {
-          "coords" : {
-            "x" : 0.0,
-            "y" : 0.0,
-            "z" : 0.0
-          },
-          "angularVelocity" : 0.0,
-          "orbitting" : null,
-          "radius" : { },
-          "position" : { }
-        }
-      },
-      "radius" : { },
-      "position" : { }
+  "ships": [],
+  "celestialBodies": [
+    {
+      "id": 25,
+      "name": "Apollo",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 0.0,
+        "orbitting": null,
+        "radius": {},
+        "position": {}
+      }
     },
-    "systemFromId" : 1,
-    "systemToId" : 0
-  } ]
+    {
+      "id": 26,
+      "name": "Zorh",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 0.07456009,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 27,
+      "name": "Anthony",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 0.034363177,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 28,
+      "name": "David",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 0.013886216,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 29,
+      "name": "Murmillo",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 2.1455438,
+        "orbitting": {
+          "id": 28,
+          "name": "David",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.013886216,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 30,
+      "name": "Retarius",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 3.8162143,
+        "orbitting": {
+          "id": 28,
+          "name": "David",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.013886216,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 31,
+      "name": "Alicia",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 0.002447695,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 32,
+      "name": "Julio",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 2.616147,
+        "orbitting": {
+          "id": 31,
+          "name": "Alicia",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.002447695,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 33,
+      "name": "Maya",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 1.8569971,
+        "orbitting": {
+          "id": 31,
+          "name": "Alicia",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.002447695,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 34,
+      "name": "Leo",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 2.0902884,
+        "orbitting": {
+          "id": 31,
+          "name": "Alicia",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.002447695,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 35,
+      "name": "Julia",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 1.9902744,
+        "orbitting": {
+          "id": 31,
+          "name": "Alicia",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.002447695,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 36,
+      "name": "Victor",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 7.320018E-4,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 37,
+      "name": "Hoth",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 1.9257748,
+        "orbitting": {
+          "id": 36,
+          "name": "Victor",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 7.320018E-4,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 38,
+      "name": "Polie",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 1.6060517,
+        "orbitting": {
+          "id": 36,
+          "name": "Victor",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 7.320018E-4,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 39,
+      "name": "Barr",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 1.3247368,
+        "orbitting": {
+          "id": 36,
+          "name": "Victor",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 7.320018E-4,
+            "orbitting": {
+              "id": 25,
+              "name": "Apollo",
+              "orbit": {
+                "coords": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "angularVelocity": 0.0,
+                "orbitting": null,
+                "radius": {},
+                "position": {}
+              }
+            },
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 40,
+      "name": "Ninurta",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 6.3856744E-4,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      }
+    },
+    {
+      "id": 41,
+      "name": "solarSystem",
+      "orbit": {
+        "coords": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "angularVelocity": 0.0012734588,
+        "orbitting": {
+          "id": 25,
+          "name": "Apollo",
+          "orbit": {
+            "coords": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "angularVelocity": 0.0,
+            "orbitting": null,
+            "radius": {},
+            "position": {}
+          }
+        },
+        "radius": {},
+        "position": {}
+      },
+      "systemFromId": 1,
+      "systemToId": 0
+    }
+  ]
 }
